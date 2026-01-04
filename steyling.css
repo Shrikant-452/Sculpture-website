@@ -1,7 +1,6 @@
 body{
-    /* background-color: #EFEEEC; */
-    background-image: url("vave_logo.png");
-    background-size: cover;
+    background-color: #EFEEEC;
+    
 }
 .navbar{
     position: fixed;
