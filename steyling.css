@@ -1,0 +1,143 @@
+body{
+    /* background-color: #EFEEEC; */
+    background-image: url("vave_logo.png");
+    background-size: cover;
+}
+.navbar{
+    position: fixed;
+    background-color: #DADBD9;
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+ 
+    height: 70px;
+    width: 1000px;
+    border-radius: 30px;
+    justify-self: center;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+    z-index: 1000;
+    display: flex;
+}
+
+        .nav-logo {
+            background-image: url("vave_logo.png");
+            background-size: cover;
+            height: 50px;
+            width: 50px;
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #764ba2;
+            flex: 0 0 auto;
+            
+        }
+
+
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            flex: 1;
+            justify-content: center;
+        }
+
+        .nav-links a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            flex: 0 0 auto;
+        }
+
+        .nav-links a:hover {
+            background: linear-gradient(135deg, #F55247, #F2C27B);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            flex: 0 0 auto;
+        }
+
+        .cart-icon {
+            position: relative;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            background: #FFB94B;
+        }
+
+        .cart-icon:hover {
+            background: #FFB94B;
+            transform: scale(1.1);
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: #ff4757;
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .hero {
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+ @media (max-width: 768px) {
+            .navbar {
+                padding: 0 3%;
+                height: 60px;
+            }
+
+            .nav-links {
+                display:none; /* Hide on mobile */
+            }
+
+            .nav-logo {
+                font-size: 1.4rem;
+            }
+
+            .hero {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem 3%;
+            }
+
+            .nav-right {
+                margin-top: 0.5rem;
+            }
+        }
