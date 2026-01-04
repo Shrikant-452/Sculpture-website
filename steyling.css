@@ -1,6 +1,5 @@
 * {
-            margin: 0;
-            padding: 0;
+
             box-sizing: border-box;
         }
 
@@ -19,6 +18,7 @@
             max-width: 1200px;
             position: fixed;
             color: white;
+            background-color: rgba(26, 26, 26, 0.6);
             backdrop-filter: blur(10px);
             top: 20px;
             left: 50%;
@@ -90,7 +90,7 @@
             position: relative;
             font-size: 1.5rem;
             cursor: pointer;
-            padding: 0.75rem;
+            padding: 0.70rem;
             border-radius: 50%;
             background: #FFB94B;
             transition: all 0.3s ease;
@@ -175,11 +175,13 @@
 
             .cart-icon {
                 margin: 0;
+                padding: 0.50rem;
             }
 
             .navbar {
                 width: 95%;
                 padding: 0 3%;
+                height: 60px;
             }
 
              .header {
@@ -211,12 +213,32 @@
             margin-bottom: 1rem;
         }
 
-
-
         .robot-3d {
-            position: abosolute;
-            top: 0;
-            right: -28%;
+  position: relative;
+  height: 1000px; width: 100%;
+  top: -30%; padding-top: 0; /* Fixed invalid negative padding */
+  margin: -8% 0 10% 0;
+  font-size: 10px;
+  box-shadow: 0 10px 50px rgba(0,0,0,0.5);
+  z-index: 1000;
+  animation: slideDown 2s ease-out;
+  transition: all 0.4s ease;
+}
+
+.robot-3d {
+  /* your existing styles + layered shadow above */
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+        @keyframes slideDown {
+            from {
+                top: -100px;
+                opacity: 0;
+            }
+            to {
+                top: 20px;
+                opacity: 1;
+            }
         }
 
         /*  auto size for tablet */
@@ -227,7 +249,7 @@
 
             .robot-3d {
                 scale: 0.8;
-                top: -20%;
+                top: -10%;
                 right: 2%;
             }
         }
@@ -253,7 +275,7 @@
             backdrop-filter: blur(10px);
             padding: 1rem 0;
             text-align: center;
-            position: fixed;
+          
             bottom: 0;
             width: 100%;
             box-shadow: 0 -4px 20px rgba(0,0,0,0.2);
