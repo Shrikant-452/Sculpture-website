@@ -8,21 +8,49 @@
 </head>
 <body>
     <script src="function.js"></script>
-    <header >
-         <nav class="navbar">
-        <div class="nav-logo"></div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <div class="nav-right">
-            <div class="cart-icon">🛒
-                <span class="cart-count">3</span>
+  <header>
+        <nav class="navbar">
+            <a href="index.html" class="nav-logo"></a>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            
+            <div class="nav-right">
+                <label for="menu-toggle" class="menu-toggle" tabindex="0">
+                    <span class="menu-line"></span>
+                    <span class="menu-line"></span>
+                    <span class="menu-line"></span>
+                </label>
+                <input type="checkbox" id="menu-toggle" class="menu-toggle-input">
+                <div class="menu-list">
+                    <a href="index.html">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#services">Services</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="cart-icon">
+                    🛒
+                    <span class="cart-count">3</span>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+         <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.29/build/spline-viewer.js"></script>
+<spline-viewer class="robot-3d" url="https://prod.spline.design/34vw56tARS6zpKFB/scene.splinecode"></spline-viewer>
     </header>
+
+    
+
+    <main class="main-content">
+        <div class="img1"></div>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Your Site. All rights reserved.</p>
+    </footer>    
 </body>
 </html>
