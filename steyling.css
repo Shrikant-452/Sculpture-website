@@ -5,7 +5,7 @@
 
         body {
             background-color:#DADBD9;
-            background-image: url("imag-1.jpg");
+            /* background-image: url("imag-1.jpg"); */
             background-size: cover;
             padding-top: 80px;
             min-height: 100vh;
