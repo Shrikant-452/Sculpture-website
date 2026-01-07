@@ -4,7 +4,7 @@
         }
 
         body {
-            background-color:#DADBD9;
+            background-color:#BEC6C3;
             /* background-image: url("imag-1.jpg"); */
             background-size: cover;
             padding-top: 80px;
@@ -13,6 +13,8 @@
             font-family: Arial, sans-serif;
         }
 
+
+        
         .navimg{
             
             background-image: url("imag-1.jpg");
@@ -38,9 +40,9 @@
             max-width: 1200px;
             position: fixed;
             color: white;
-            background-color:  #B9968D ;
+            background-color:  #E9BC8B;
             backdrop-filter: blur(9px) opacity(0.8);
-            top: 20px;
+            top: 15px;
             left: 50%;
             transform: translateX(-50%);
             border-radius: 30px;
@@ -59,7 +61,7 @@
                 opacity: 0;
             }
             to {
-                top: 20px;
+                top: 1px;
                 opacity: 1;
             }
         }
@@ -211,9 +213,7 @@
 
         }
 
-        robot-3dm{
-            width: 100%;
-        }
+
 
         .main-content {
             max-width: 1200px;
@@ -230,7 +230,45 @@
         }
 
 
+        /* Hero */
+.hero {
+    display: flex;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    padding: 80px;
+    gap: 60px;
+}
 
+.hero-text {
+    max-width: 900px;
+    margin-left: 30%;
+    animation: slideIn 2s ease;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    color: #6B7280;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.hero-img img {
+    width: 450px;
+    margin-right: 60%;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    animation: slideIn-2 2s ease;
+}
 
         @keyframes slideDown {
             from {
@@ -262,27 +300,109 @@
             box-shadow: 0 4px 20px rgba(0,0,0,0.3);
             margin-top: 2rem;
         } */
-        .main-div-1{
-            height: 400px;
-            width: 100%;
-            border: solid 2px black;
-        }
 
 
 
-        /*  -----------footer part */
-        .footer {
-            background-color: #BEC6C3;
-            backdrop-filter: blur(10px);
-            padding: 1rem 0;
-            text-align: center;
-          
-            bottom: 0;
-            width: 100%;
-            box-shadow: 0 -4px 20px rgba(0,0,0,0.2);
-        }
 
-        .footer p {
-            color: #333;
-            font-size: 0.9rem;
-        }
+      
+/* Buttons */
+.btn {
+    padding: 14px 34px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.primary {
+    background: #499FA4;
+    color: white;
+}
+
+.primary:hover {
+    background: #3D4A55;
+}
+
+.outline {
+    border: 2px solid #BEC6C3;
+    color: #5B7CFA;
+}
+
+.outline:hover {
+    background: #E9BC8B;
+    color: #BEC6C3;
+}
+
+/* Features */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 30px;
+    padding: 80px;
+}
+
+.feature {
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+    transition: 0.3s;
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+    box-shadow: #499FA4 2px 4px 2px 2px;
+}
+
+/* Dashboard */
+.dashboard {
+    text-align: center;
+    padding: 90px;
+}
+
+.dashboard h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.dashboard p {
+    color: #6B7280;
+    margin-bottom: 40px;
+}
+
+.dashboard img {
+    width: 80%;
+    border-radius: 25px;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+}
+
+/* Footer */
+footer {
+    background: #4E514E;
+    padding: 25px;
+   width: 100%;
+    color: white;
+}
+
+/* Animation */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideIn-2 {
+    from {
+        opacity: 0;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-30px);
+    }
+}
