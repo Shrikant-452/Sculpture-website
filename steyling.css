@@ -449,4 +449,286 @@
             background-image: url('demo-3.jpg');
             background-size: cover;
         }
+
+
+
+
+
+        /* -------------------------------------------order page---------------- */
+
+        /* style.css - Complete Amazon-style shopping website */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { 
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
+    color: #0f1111; 
+    line-height: 1.5;
+}
+
+/* Main Wrapper */
+.shopmax-wrapper { max-width: 1400px; margin: 0 auto; }
+
+/* Top Navigation */
+.shopmax-topnav { 
+    background: #232f3e; 
+    padding: 10px 20px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.shopmax-logo-section { display: flex; align-items: center; }
+.shopmax-logo-link { 
+    display: flex; 
+    align-items: center; 
+    text-decoration: none; 
+    color: #fff; 
+    font-size: 24px; 
+    font-weight: bold;
+}
+.shopmax-logo-icon { font-size: 28px; margin-right: 8px; }
+
+.shopmax-search-container { flex: 1; max-width: 600px; margin: 0 20px; }
+.shopmax-search-box { 
+    display: flex; 
+    background: #fff; 
+    border-radius: 4px; 
+    overflow: hidden; 
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.shopmax-search-category { 
+    background: #f3f3f3; 
+    border: none; 
+    padding: 12px; 
+    font-size: 14px; 
+    color: #555;
+}
+.shopmax-search-input { 
+    flex: 1; 
+    border: none; 
+    padding: 12px 16px; 
+    font-size: 16px;
+}
+.shopmax-search-input:focus { outline: none; }
+.shopmax-search-btn { 
+    background: #ff9900; 
+    border: none; 
+    padding: 12px 16px; 
+    color: #fff; 
+    cursor: pointer; 
+    transition: background 0.3s;
+}
+.shopmax-search-btn:hover { background: #e68900; }
+
+.shopmax-user-actions { display: flex; align-items: center; gap: 20px; }
+.shopmax-auth-link, .shopmax-cart-link { 
+    color: #fff; 
+    text-decoration: none; 
+    padding: 8px 12px; 
+    border-radius: 4px; 
+    transition: background 0.3s;
+}
+.shopmax-auth-link:hover, .shopmax-cart-link:hover { background: rgba(255,255,255,0.1); }
+.shopmax-cart-count { 
+    background: #ff9900; 
+    color: #fff; 
+    border-radius: 50%; 
+    padding: 2px 6px; 
+    font-size: 12px; 
+    margin-left: 5px;
+}
+
+/* Secondary Navigation */
+.shopmax-subnav { 
+    background: #37475a; 
+    padding: 8px 20px; 
+}
+.shopmax-nav-item { 
+    color: #fff; 
+    text-decoration: none; 
+    margin-right: 30px; 
+    font-size: 14px; 
+    transition: color 0.3s;
+}
+.shopmax-nav-item:hover { color: #ff9900; }
+
+/* Hero Banner */
+.shopmax-hero-banner { 
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+    height: 300px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+    color: #fff; 
+    margin: 20px 0;
+}
+.shopmax-hero-title { font-size: 48px; margin-bottom: 10px; }
+.shopmax-hero-subtitle { font-size: 20px; margin-bottom: 25px; opacity: 0.9; }
+.shopmax-hero-cta { 
+    background: #ff9900; 
+    border: none; 
+    padding: 15px 40px; 
+    font-size: 18px; 
+    font-weight: bold; 
+    border-radius: 25px; 
+    color: #fff; 
+    cursor: pointer; 
+    transition: all 0.3s;
+}
+.shopmax-hero-cta:hover { 
+    transform: translateY(-2px); 
+    box-shadow: 0 10px 25px rgba(255,153,0,0.4);
+}
+
+/* Category Strip */
+.shopmax-category-strip { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 20px; 
+    padding: 40px 20px; 
+    max-width: 1200px; 
+    margin: 0 auto;
+}
+.shopmax-category-card { 
+    text-decoration: none; 
+    padding: 30px; 
+    border-radius: 15px; 
+    text-align: center; 
+    transition: all 0.4s; 
+    color: #fff;
+}
+.shopmax-category-card:hover { transform: translateY(-10px) scale(1.05); }
+.shopmax-category-icon { font-size: 48px; display: block; margin-bottom: 15px; }
+.shopmax-category-name { font-size: 20px; font-weight: bold; }
+.electronics { background: linear-gradient(135deg, #667eea, #764ba2); }
+.fashion { background: linear-gradient(135deg, #f093fb, #f5576c); }
+.home { background: linear-gradient(135deg, #4facfe, #00f2fe); }
+.books { background: linear-gradient(135deg, #43e97b, #38f9d7); }
+
+/* Products Section */
+.shopmax-products-main { padding: 40px 20px; max-width: 1200px; margin: 0 auto; }
+.shopmax-products-header { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 30px;
+}
+.shopmax-products-title { font-size: 32px; }
+.shopmax-sort-select { 
+    padding: 10px 20px; 
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
+    background: #fff;
+}
+
+.shopmax-products-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+    gap: 25px;
+}
+
+.shopmax-product-card { 
+    background: #fff; 
+    border-radius: 12px; 
+    overflow: hidden; 
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1); 
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.shopmax-product-card:hover { 
+    transform: translateY(-12px); 
+    box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+}
+.shopmax-product-image { 
+    position: relative; 
+    height: 250px; 
+    overflow: hidden;
+}
+.shopmax-product-image img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    transition: transform 0.4s;
+}
+.shopmax-product-card:hover .shopmax-product-image img { transform: scale(1.1); }
+.shopmax-wishlist-btn { 
+    position: absolute; 
+    top: 15px; 
+    right: 15px; 
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%; 
+    background: rgba(255,255,255,0.9); 
+    border: none; 
+    cursor: pointer; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    font-size: 18px; 
+    transition: all 0.3s;
+}
+.shopmax-wishlist-btn:hover { background: #ff9900; color: #fff; }
+
+.shopmax-product-info { padding: 20px; }
+.shopmax-product-name { font-size: 18px; margin-bottom: 10px; line-height: 1.4; }
+.shopmax-product-rating { margin-bottom: 12px; }
+.shopmax-stars { color: #ffa41c; }
+.shopmax-reviews { color: #666; font-size: 14px; margin-left: 8px; }
+.shopmax-product-price { margin-bottom: 15px; }
+.shopmax-current-price { 
+    font-size: 24px; 
+    font-weight: bold; 
+    color: #b12704;
+}
+.shopmax-old-price { 
+    color: #666; 
+    text-decoration: line-through; 
+    margin-left: 10px; 
+    font-size: 16px;
+}
+.shopmax-product-actions { display: flex; gap: 10px; }
+.shopmax-add-cart-btn, .shopmax-buy-now-btn { 
+    flex: 1; 
+    padding: 12px; 
+    border: none; 
+    border-radius: 8px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    transition: all 0.3s;
+}
+.shopmax-add-cart-btn { 
+    background: #ffa41c; 
+    color: #fff;
+}
+.shopmax-add-cart-btn:hover { background: #e68900; transform: translateY(-1px); }
+.shopmax-buy-now-btn { 
+    background: #232f3e; 
+    color: #fff;
+}
+.shopmax-buy-now-btn:hover { background: #0f1111; transform: translateY(-1px); }
+
+/* Footer */
+.shopmax-footer { 
+    background: #232f3e; 
+    color: #fff; 
+    text-align: center; 
+    padding: 30px 20px; 
+    margin-top: 60px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .shopmax-topnav { flex-direction: column; gap: 15px; padding: 15px; }
+    .shopmax-search-container { max-width: 100%; margin: 0; order: 3; }
+    .shopmax-hero-title { font-size: 32px; }
+    .shopmax-products-grid { grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); }
+    .shopmax-product-actions { flex-direction: column; }
+}
+
+@media (max-width: 480px) {
+    .shopmax-products-grid { grid-template-columns: 1fr; }
+    .shopmax-hero-title { font-size: 24px; }
+}
+
         
