@@ -46,7 +46,7 @@
         }
 
         .nav-logo {
-            background-image: url("vave_logo.png");
+            background-image: url("/Sculpture-website/image/vave_logo.png");
             background-size: cover;
             height: 90px;
             width: 80px;
@@ -436,17 +436,17 @@
         }
 
         .demo-image-1 {
-            background-image: url('demo-1.jpg');
+            background-image: url('/Sculpture-website/image/demo-1.jpg');
             background-size:cover;
         }
 
         .demo-image-2 {
-            background-image: url('demo-2.jpg');
+            background-image: url('/Sculpture-website/image/demo-2.jpg');
             background-size: cover;
         }
 
         .demo-image-3 {
-            background-image: url('demo-3.jpg');
+            background-image: url('/Sculpture-website/image/demo-3.jpg');
             background-size: cover;
         }
 
