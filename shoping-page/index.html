@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="shopping.css">
+    <link rel="stylesheet" href="media-quary.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <title>Shopping Page</title>
+</head>
+<body>
+
+    <header class="head-section" >
+        <div class="logo-container"></div>
+        <nav class="navbar">
+            <form>
+                <div class="main-container">
+                    <div class="search-bar">
+                        <div class="category">
+                            <select type="dropdown" title="select">
+                                <option>ALL</option>
+                                <option>Jewelry</option>
+                                <option>Home Decor</option>
+                                <option>Clothing</option>
+                            </select>
+                        </div>
+                        <input
+                            type="text"
+                            placeholder="Search beautiful sculpture"
+                        />
+
+                        <button type="button" title="button" class="search-btn">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </nav>
+        <div class="add-to-cart-menu">
+            <div class="wishlist">
+                <i class="bi bi-heart"></i>
+                <span>Wishlist</span>
+            </div>
+            <div class="my-order">
+                <i class="bi bi-person"></i>
+                <span>My Order</span>
+            </div>
+            <div class="cart">
+                <i class="bi bi-bag"></i>
+                <span>Cart</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="middle-section">
+        <div class="hero-section " >
+            <div class="carousel-image">
+                <section class="hero">
+                    <div class="slider">
+                        <div class="slide active">
+                            <img src="/hindustatue.jpeg.webp" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="/buddhist.jpeg.webp" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="/replublicday-2026-sale.webp" alt="">
+                        </div>
+                    </div>
+                    <div class="controls">
+                        <button type="button" id="prev">&#10094;</button>
+                        <button type="button" id="next">&#10095;</button>
+                    </div>
+                    <div class="dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </section>
+                <div class="left-side-image">
+                <img src="https://cdn.exoticindia.com/images/products/banners/free-static-1.webp" alt="" width="600" height="400">
+                </div>
+            </div>
+        </div>
+
+        <div class="product-category">
+            <div class="product-title">Shop by Category</div>
+            <div class="categories-container category-box">
+                <div class="column has-text-centered is-4-touch is-2-desktop">
+                    <div class="px-2">
+                        <a href="/statues.html" title=""><img src="https://cdn.exoticindia.com/images/products/home-subjects/hindu-statues.webp" title="Hindu Statues" alt="Hindu Statues" width="155" height="155">
+                        </a> 
+                    </div>
+                        <div class="title is-size-7 is-size-6-desktop is-family-secondary is-uppercase pt-3"><a href="/statues.html" title="Hindu Statues">Hindu Statues</a></div>
+                </div>
+                <div class="column has-text-centered is-4-touch is-2-desktop">
+                    <div class="px-2">
+                        <a href="/sculptures/brass/" title=""><img src="https://cdn.exoticindia.com/images/products/home-subjects/Brass-statue.webp" title="Brass Statues" alt="Brass Statues" width="155" height="155"></a>   
+                    </div>
+                    <div class="title is-size-7 is-size-6-desktop is-family-secondary is-uppercase pt-3"><a href="/sculptures/brass/" title="Brass Statues">Brass Statues</a></div>
+                </div>
+                <div class="column has-text-centered is-4-touch is-2-desktop">
+                    <div class="px-2">
+                        <a href="/sculptures/smallstatues/" title=""><img src="https://cdn.exoticindia.com/images/products/home-subjects/Small-statue.webp" title="Small Statues" alt="Small Statues" width="155" height="155"></a> 
+                    </div>
+                    <div class="title is-size-7 is-size-6-desktop is-family-secondary is-uppercase pt-3"><a href="/sculptures/smallstatues/" title="Small Statues">Small Statues</a></div>
+                </div>
+                <div class="column has-text-centered is-4-touch is-2-desktop">
+                    <div class="px-2">
+                        <a href="/sculptures/bronze/" title=""><img src="https://cdn.exoticindia.com/images/products/home-subjects/bronze-statues.webp" title="Bronze Statues" alt="Bronze Statues" width="155" height="155"></a>            
+                    </div>
+                    <div class="title is-size-7 is-size-6-desktop is-family-secondary is-uppercase pt-3"><a href="/sculptures/bronze/" title="Bronze Statues">Bronze Statues</a></div>
+                </div>
+                <div class="column has-text-centered is-4-touch is-2-desktop">
+                    <div class="px-2">
+                        <a href="/sculptures/nepalese/">
+                            <img src="https://cdn.exoticindia.com/images/products/home-subjects/Nepalese.webp" title="Nepalese Statues" alt="Nepalese Statues">
+                        </a>
+                    </div>
+                    <div class="title is-size-7 is-size-6-desktop is-family-secondary is-uppercase pt-3"><a href="/sculptures/nepalese/" title="Nepalese Statues">Nepalese Statues</a></div>
+                </div>
+                <div class="column has-text-centered is-4-touch is-2-desktop">
+                    <div class="px-2">
+                        <a href="/sculptures/hindu/wood-statues/"><img src="https://cdn.exoticindia.com/images/products/home-subjects/Hindu-wood-statues.webp" title="Hindu Wood Statues" alt="Hindu Wood Statues"></a>
+                    </div>
+                    <div class="title is-size-7 is-size-6-desktop is-family-secondary is-uppercase pt-3"><a href="/sculptures/hindu/wood-statues/" title="Hindu Wood Statues">Hindu Wood Statues</a></div>
+                </div>
+            </div>
+            <div class="categories-container category-box">
+                <div class="column has-text-centered is-4-touch is-2-desktop">
+                    <div class="px-2">
+                        <a href="/sculptures/stone/">
+                                <img src="https://cdn.exoticindia.com/images/products/home-subjects/Stone-statue.webp" title="Stone Statues" alt="Stone Statues">
+                        </a>
+                    </div>
+                    <div class="title is-size-7 is-size-6-desktop is-family-secondary is-uppercase pt-3"><a href="/sculptures/stone/" title="Stone Statues">Stone Statues</a></div>
+                </div>
+                <div class="column has-text-centered is-4-touch is-2-desktop">
+                    <div class="px-2">
+                        <a href="/sculptures/brass/ritual/">
+                            <img src="https://cdn.exoticindia.com/images/products/home-subjects/brass-ritual.webp" title="Brass Ritual Statues" alt="Brass Ritual Statues">
+                        </a>
+                    </div>
+                    <div class="title is-size-7 is-size-6-desktop is-family-secondary is-uppercase pt-3"><a href="/sculptures/brass/ritual/" title="Brass Ritual Statues">Brass Ritual Statues</a></div>
+                </div>
+                <div class="column has-text-centered is-4-touch is-2-desktop">
+                    <div class="px-2">
+                        <a href="/sculptures/wood/">
+                        <img src="https://cdn.exoticindia.com/images/products/home-subjects/Wood.webp" title="Wood Statues" alt="Wood Statues">
+                        </a>
+                    </div>
+                <div class="title is-size-7 is-size-6-desktop is-family-secondary is-uppercase pt-3"><a href="/sculptures/wood/" title="Wood Statues">Wood Statues</a></div>
+                </div>
+                <div class="column has-text-centered is-4-touch is-2-desktop">
+                    <div class="px-2">
+                        <a href="/sculptures/hindu/goddess/">
+                            <img src="https://cdn.exoticindia.com/images/products/home-subjects/Hindu-goddess.webp" title="Hindu Goddess Statues" alt="Hindu Goddess Statues">
+                        </a>
+                    </div>
+                    <div class="title is-size-7 is-size-6-desktop is-family-secondary is-uppercase pt-3"><a href="/sculptures/hindu/goddess/" title="Hindu Goddess Statues">Hindu Goddess Statues</a></div>
+                </div>
+                <div class="column has-text-centered is-4-touch is-2-desktop">
+                    <div class="px-2">
+                        <a href="/sculptures/hindu/vishnu/">
+                            <img src="https://cdn.exoticindia.com/images/products/home-subjects/vishnu-statues.webp" title="Vishnu Statues" alt="Vishnu Statues">
+                        </a>
+                    </div>
+                    <div class="title is-size-7 is-size-6-desktop is-family-secondary is-uppercase pt-3"><a href="/sculptures/hindu/vishnu/" title="Vishnu Statues">Vishnu Statues</a></div>
+                </div>
+                <div class="column has-text-centered is-4-touch is-2-desktop">
+                    <div class="px-2">
+                        <a href="/sculptures/hindu/hanuman/"><img src="https://cdn.exoticindia.com/images/products/home-subjects/Hanuman-statues.webp" title="Hanuman Statues" alt="Hanuman Statues"></a>
+                    </div>
+                    <div class="title is-size-7 is-size-6-desktop is-family-secondary is-uppercase pt-3"><a href="/sculptures/hindu/hanuman/" title="Hanuman Statues">Hanuman Statues</a></div>
+                </div>
+            </div>
+            <div class="has-text-centered mt-5 see-all-category pt-3">
+                <button type="button" class="button is-small is-black is-rounded more-subjects" id="view-more-option" rel-page="2" rel-perpage="12">+ More</button>
+            </div>
+        </div>
+
+        <div class="explore-container">
+        <div class="shape-list-header-footer explore-image"><img src="https://cdn.exoticindia.com/images/homepage-explore-top-bg.svg" alt="" loading="lazy" width="100%" height="auto"></div>
+        <div class="explore-section">
+            <div class="home-categories-list">
+                <div class="title is-size-4 is-size-3-desktop is-size-2-widescreen has-text-centered explore-tital">Explore our categories</div>
+                <div class="categories-container explore-box">
+                    <div class="column has-text-centered is-4-touch is-2-desktop box">
+                        <div class="px-2">
+                            <a href="/sculptures/hindu/" title="">
+                                <img src="https://cdn.exoticindia.com/images/products/home-subjects/hindu-statues.webp" class="explore-section-image" title="Hindu Statues" alt="Hindu Statues" width="155" height="155">
+                            </a> 
+                        </div>
+                        <div class="title is-size-7 is-size-6-desktop is-family-secondary is-uppercase pt-3"><a href="/sculptures/hindu/" title="Hindu Statues">Hindu Statues</a></div>
+                    </div>
+                    <div class="column has-text-centered is-4-touch is-2-desktop box">
+                        <div class="px-2">
+                            <a href="/sculptures/brass/" title="">
+                                <img src="https://cdn.exoticindia.com/images/products/home-subjects/Brass-statue.webp" class="explore-section-image" title="Brass Statues" alt="Brass Statues" width="155" height="155">
+                            </a>   
+                        </div>
+                        <div class="title is-size-7 is-size-6-desktop is-family-secondary is-uppercase pt-3"><a href="/sculptures/brass/" title="Brass Statues">Brass Statues</a></div>
+                    </div>
+                    <div class="column has-text-centered is-4-touch is-2-desktop box">
+                        <div class="px-2">
+                            <a href="/sculptures/smallstatues/" title="">
+                                <img src="https://cdn.exoticindia.com/images/products/home-subjects/Small-statue.webp" class="explore-section-image" title="Small Statues" alt="Small Statues" width="155" height="155">
+                            </a> 
+                        </div>
+                        <div class="title is-size-7 is-size-6-desktop is-family-secondary is-uppercase pt-3"><a href="/sculptures/smallstatues/" title="Small Statues">Small Statues</a></div>
+                    </div>
+                    <div class="column has-text-centered is-4-touch is-2-desktop box">
+                        <div class="px-2">
+                            <a href="/sculptures/bronze/" title="">
+                                <img src="https://cdn.exoticindia.com/images/products/home-subjects/bronze-statues.webp" class="explore-section-image" title="Bronze Statues" alt="Bronze Statues" width="155" height="155">
+                            </a>            
+                        </div>
+                        <div class="title is-size-7 is-size-6-desktop is-family-secondary is-uppercase pt-3"><a href="/sculptures/bronze/" title="Bronze Statues">Bronze Statues</a></div>
+                    </div>
+                    <div class="column has-text-centered is-4-touch is-2-desktop box">
+                        <div class="px-2">
+                            <a href="/sculptures/nepalese/">
+                                <img src="https://cdn.exoticindia.com/images/products/home-subjects/Nepalese.webp" class="explore-section-image" title="Nepalese Statues" alt="Nepalese Statues" width="155" height="155">
+                            </a>
+                        </div>
+                        <div class="title is-size-7 is-size-6-desktop is-family-secondary is-uppercase pt-3"><a href="/sculptures/nepalese/" title="Nepalese Statues">Nepalese Statues</a></div>
+                    </div>
+                    <div class="column has-text-centered is-4-touch is-2-desktop box">
+                        <div class="px-2">
+                            <a href="/sculptures/hindu/wood-statues/">
+                                <img src="https://cdn.exoticindia.com/images/products/home-subjects/Hindu-wood-statues.webp" class="explore-section-image" title="Hindu Wood Statues" alt="Hindu Wood Statues" width="155" height="155">
+                            </a>
+                        </div>
+                        <div class="title is-size-7 is-size-6-desktop is-family-secondary is-uppercase pt-3"><a href="/sculptures/hindu/wood-statues/" title="Hindu Wood Statues">Hindu Wood Statues</a></div>
+                    </div>
+                </div>
+            </div>
+        <div class="shape-list-header-footer"><img src="https://cdn.exoticindia.com/images/homepage-explore-bottom-bg.svg" alt="" loading="lazy" width="100%" height="auto"></div>
+        </div>
+        </div>
+    </section>
+
+    <div class="footer-section">
+        <div class="wave-border"></div>
+        <footer class="footer">
+            <div class="footer-information">
+                <div class="columns">
+                    <div class="column">
+                        <div class="title is-size-6 is-size-5-fullhd is-flex is-justify-content-space-between footer-column-title" rel="products">
+                            <div>Products</div>
+                            <i class="fa-light fa-angle-down is-hidden-desktop"></i>
+                        </div>
+                        <div class="is-hidden-touch footer-column-content" rel="products">
+                            <ul class="is-family-secondary is-size-6 is-size-7-desktop is-size-6-fullhd">
+                                <li>
+                                    <a href="/sculptures/" class="has-text-white" title="Statues">Statues</a>
+                                </li>			
+                                <li>
+                                    <a href="/book/" class="has-text-white" title="Books">Books</a>
+                                </li>		
+                                <li>
+                                    <a href="/jewelry/" class="has-text-white" title="Jewelry">Jewelry</a>
+                                </li>		
+                                <li>
+                                    <a href="/textiles/" class="has-text-white" title="Clothing &amp; More">Clothing &amp; More</a>
+                                </li>					
+                                <li>
+                                    <a href="/paintings/" class="has-text-white" title="Paintings">Paintings</a>
+                                </li>						
+                                <li>
+                                    <a href="/paintings/" class="has-text-white" title="Paintings">Paintings</a>
+                                </li>			
+                                <li>
+                                    <a href="/homeandliving/" class="has-text-white" title="Home &amp; Living">Home &amp; Living</a>
+                                </li>       
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="title is-size-6 is-size-5-fullhd is-flex is-justify-content-space-between footer-column-title" rel="information">
+                            <div>Information</div>
+                            <i class="fa-light fa-angle-down is-hidden-desktop"></i>
+                        </div>
+                        <div class="is-hidden-touch footer-column-content" rel="information">
+                            <ul class="is-family-secondary is-size-6 is-size-7-desktop is-size-6-fullhd">
+                                <li><a href="/disclaimer/" class="has-text-white" title="Disclaimer">Disclaimer</a></li>	
+                                <li><a href="/returns/" class="has-text-white" title="Return Policy">Return Policy</a></li>		
+                                <li><a href="/privacy/" class="has-text-white" title="Privacy Policy">Privacy Policy</a></li>		
+                                <li><a href="/shipping/" class="has-text-white" title="Shipping Policy">Shipping Policy</a></li>	
+                                <li><a href="/terms/" class="has-text-white" title="Terms of Use">Terms of Use</a></li>                  
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="title is-size-6 is-size-5-fullhd is-flex is-justify-content-space-between footer-column-title" rel="discover">
+                            <div>Discover</div>
+                            <i class="fa-light fa-angle-down is-hidden-desktop"></i>
+                        </div>
+                        <div class="is-hidden-touch footer-column-content" rel="discover">
+                            <ul class="is-family-secondary is-size-6 is-size-7-desktop is-size-6-fullhd">
+                                <li><a href="/aboutus/" class="has-text-white" title="About Us">About Us</a></li>		
+                                <li><a href="/faq/" class="has-text-white" title="FAQs">FAQs</a></li>
+                                <li><a href="/article/" class="has-text-white" title="Newsletter Archive">Newsletter Archive</a></li>					
+                                <li><a href="/blog/" class="has-text-white" title="Blogs">Blogs</a></li>					
+                                <li><a href="/documentary/" class="has-text-white" title="Documentaries">Documentaries</a></li>					
+                                <li><a href="/testimonials/" class="has-text-white" title="Testimonials">Testimonials</a></li>					
+                                <li><a href="/customerstories/" class="has-text-white" title="Customer Stories">Customer Stories</a></li>					
+                                <li><a href="/editorspicks/" class="has-text-white" title="Editor's Picks">Editor's Picks</a></li>                  
+                                <li class="has-text-white">Archives
+                                    <ul class="has-text-white is-family-primary" style="font-size:0.625rem;line-height:175%;padding-left:3px;margin-top:-10px;">
+                                        <li><a href="/archives/sculptures/" class="has-text-white" title="Archives - Statues">Statues</a></li>					
+                                        <li><a href="/archives/book/" class="has-text-white" title="Archives - Books">Books</a></li>					
+                                        <li><a href="/archives/jewelry/" class="has-text-white" title="Archives - Jewelry">Jewelry</a></li>	
+                                        <li><a href="/archives/textiles/" class="has-text-white" title="Archives - Clothing &amp; More">Clothing &amp; More</a></li>					
+                                        <li><a href="/archives/paintings/" class="has-text-white" title="Archives - Paintings">Paintings</a></li>					
+                                        <li><a href="/archives/homeandliving/" class="has-text-white" title="Archives - Home &amp; Living">Home &amp; Living</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="title is-size-6 is-size-5-fullhd is-flex is-justify-content-space-between footer-column-title" rel="tools">
+                            <div>Tools</div>
+                            <i class="fa-light fa-angle-down is-hidden-desktop"></i>
+                        </div>
+                        <div class="is-hidden-touch footer-column-content" rel="tools">
+                            <ul class="is-family-secondary is-size-6 is-size-7-desktop is-size-6-fullhd">
+                                <li><a href="/contact-us/" class="has-text-white" title="Contact Us">Contact Us</a></li>					
+                                <li><a href="/customization/" class="has-text-white" title="Customize">Customize</a></li>					
+                                <li><a href="/sell-with-us/" class="has-text-white" title="Sell with Us">Sell with Us</a></li>					
+                                <li><a href="/resellers/" class="has-text-white" title="Wholesale">Wholesale</a></li>					
+                                <li><a href="/affiliate-program/" class="has-text-white" title="Affiliates Program">Affiliates Program</a></li>					
+                                <li><a href="/my-orders/" class="has-text-white" title="Track Your Order">Track Your Order</a></li>					
+                                <li><a href="/gift-voucher/" class="has-text-white" title="Gift Vouchers">Gift Vouchers</a></li>					
+                                <li><a href="/sitemap/" class="has-text-white" title="Sitemap">Sitemap</a></li>                            
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="shopping.js"></script>
+</body>
+</html>

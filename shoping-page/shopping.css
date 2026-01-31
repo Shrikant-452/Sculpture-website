@@ -1,0 +1,524 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    max-width: 100%;
+    height: 80px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 6rem;
+}
+
+@media screen and (min-width: 1024px) {
+    header{
+        min-height: 3.25rem;
+        align-items: stretch;
+        display: flex;
+    }
+}
+
+
+.logo-container{
+    background-image: url("vave_logo.png");
+    background-size: cover;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.main-container{
+    display: flex;
+    justify-content: flex-start;
+    border-radius: 10%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    width: 700px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    overflow: hidden;
+    background: #f9f9f9;
+}
+
+.search-bar {
+    flex: 1;
+    min-width: 180px;
+}
+
+.category {
+    border-right: 1px solid black;
+    padding: 0 10px;
+}
+
+.category select {
+    border: none;
+    outline: none;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+}
+
+.search-bar input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 12px 15px;
+    font-size: 14px;
+    background: #f9f9f9;
+}
+
+.search-btn {
+    border: none;
+    background: transparent;
+    padding: 0 20px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.add-to-cart-menu{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    justify-content: center;
+}
+
+i{
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+.add-to-cart-menu span{
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.add-to-cart-menu .wishlist , .cart , .my-order{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Hero and Carousel Section CSS */
+.carousel-image{
+    padding: 0 70px;
+    justify-content: space-evenly;
+    display: flex;
+}
+
+.left-side-image{
+    position:relative;
+    overflow:hidden;
+    border-radius:5%;
+    margin-top: 1%;
+    padding: 20px 0;
+}
+
+.left-side-image img{
+    border-radius: 5%;
+}
+
+.hero{
+    width: 100%;
+    max-width: 760px;
+    height:500px;
+    position:relative;
+    overflow:hidden;
+    border-radius:5%;
+    margin-top: 1%;
+}
+
+.slider{
+    width:100%;
+    height:100%;
+    position:relative;
+}
+
+.slide{
+    position:absolute;
+    width:100%;
+    height:100%;
+    opacity:0;
+    transition:0.5s;
+}
+
+.slide.active{
+    opacity:1;
+}
+
+.slide img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.overlay{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(255,255,255,0.7);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.overlay.brown{
+    background:rgba(130,80,30,0.85);
+    color:white;
+}
+
+.overlay h1{
+    font-size:60px;
+    letter-spacing:2px;
+}
+
+.overlay span{
+    color:#c9a44c;
+}
+
+.overlay button{
+    margin-top:20px;
+    padding:12px 30px;
+    border:none;
+    background:#c9a44c;
+    color:#fff;
+    font-size:16px;
+    border-radius:25px;
+    cursor:pointer;
+}
+
+.controls{
+    position:absolute;
+    width:100%;
+    top:50%;
+    display:flex;
+    justify-content:space-between;
+    transform:translateY(-50%);
+    padding:0 20px;
+}
+
+.controls button{
+    background:rgba(0,0,0,0.4);
+    color:white;
+    border:none;
+    font-size:25px;
+    padding:10px 15px;
+    border-radius:50%;
+    cursor:pointer;
+}
+
+.dots{
+    position:absolute;
+    bottom:20px;
+    width:100%;
+    text-align:center;
+}
+
+.dot{
+    display:inline-block;
+    width:12px;
+    height:12px;
+    background:#ccc;
+    border-radius:50%;
+    margin:0 5px;
+    cursor:pointer;
+}
+
+.dot.active{
+    background:#c9a44c;
+}
+
+.main-home-banner{
+    position: relative;
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+    width: 500px;
+    padding: 20px;
+}
+
+
+/* Category Section */
+
+.product-category{
+    margin-top: 5%;
+}
+
+.carousel-caption{
+    color: black;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.product-title{
+    font-size: 2rem;
+    margin: 10px;
+    text-align: center;
+    color: hsl(0, 0%, 21%);
+    font-weight: 600;
+    line-height: 1.125;
+}
+
+.wave-border {
+    width: 100%;
+    height: 100px;
+    display: block;
+    background-image: url("https://cdn.exoticindia.com/images/footer-roof.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.categories-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 10px;
+    padding: 0 40px;
+    align-items: center;
+}
+
+.has-text-centered {
+    text-align: center !important;
+}
+
+.pt-3 a{
+    color: #000;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1rem;
+}
+
+
+.home-categories-list .pt-3 a{
+    color: #000;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.see-all-category{
+    width: 100%;
+    margin-top: .5rem !important;
+}
+
+.button.is-rounded {
+    border-radius: 9999px;
+    padding-left: calc(1em+0.25em);
+    padding-right: calc(1em+0.25em);
+}
+
+.button.is-small {
+    font-size: .75rem;
+}
+
+.button{
+    width: 4%;
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    height: 1.5rem;
+}
+
+.button.is-black {
+    background-color: hsl(0, 0%, 4%);
+    border-color: transparent;
+    color: hsl(0, 0%, 100%);
+}
+
+
+/* Explore Section  */
+
+.explore-content{
+    width: 100%;
+    height: 490px;
+    padding: 2rem 0rem;
+    background-color: #f9e9da;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.explore-tital{
+    margin-bottom: 1.5rem;
+    color: hsl(0, 0%, 21%);
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.125;
+    word-break: break-word;
+    text-align: center !important;
+    width: 100%;
+}
+
+.explore-content .title {
+    color: hsl(0, 0%, 21%);
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.125;
+}
+
+.column {
+    display: block;
+    flex-basis: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding: .75rem;
+}
+
+.explore-section-image{
+    border-radius: 50%;
+    border: none;
+}
+
+.home-categories-list {
+    width: 100%;
+    height: 490px;
+    padding: 2rem 0rem;
+    background-color: #f9e9da;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-categories-list .categories-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 10px;
+    padding: 0 40px;
+    align-items: center;
+}
+
+
+/* Footer Section */
+
+.footer-section{
+    margin-top: 10%;
+}
+
+.footer {
+    background-color: #161815;
+    background-image: url(https://cdn.exoticindia.com/images/footer-bg.png);
+    background-repeat: repeat-y;
+    background-size: 100% auto;
+    line-height: 250%;
+    padding: 1rem 0;
+}
+
+.footer .columns {
+    margin: auto;
+    padding: 2rem 0;
+    width: 84%;
+}
+
+.footer .title {
+    color: #fff;
+    margin-bottom: .5rem;
+}
+
+.columns {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+    margin-top: -0.75rem;
+    display: flex;
+}
+
+.footer {
+    background-color: #000;
+    padding: 6rem 1.5rem 6rem;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: -30px;
+}
+
+.footer.column {
+    display: block;
+    flex-basis: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding: .75rem;
+}
+
+.column div{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.footer .title {
+    color: #fff;
+    margin-bottom: .5rem;
+    font-weight: 600;
+}
+
+.has-text-white {
+    color: hsl(0, 0%, 100%) !important;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.is-family-secondary {
+    font-family: "Montserrat", sans-serif !important;
+}
+
+@media screen and (min-width: 1408px) {
+    .is-size-6-fullhd {
+        font-size: 1rem !important;
+    }
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: list-item;
+    unicode-bidi: isolate;
+}
+
+.has-text-white {
+    color: hsl(0, 0%, 100%) !important;
+}
