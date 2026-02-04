@@ -4,6 +4,22 @@
     box-sizing: border-box;
 }
 
+body {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
 html, body {
     width: 100%;
     overflow-x: hidden;
@@ -35,9 +51,23 @@ header{
     }
 }
 
+.head-section {
+    animation: slideDown 0.7s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
 
 .logo-container{
-    background-image: url("vave_logo.png");
+    background-image: url("/image/vave_logo.png");
     background-size: cover;
     height: 80px;
     width: 80px;
@@ -69,6 +99,17 @@ body {
     flex: 1;
     min-width: 180px;
 }
+
+.search-bar {
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.search-bar:hover,
+.search-bar:focus-within {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    transform: scale(1.02);
+}
+
 
 .category {
     border-right: 1px solid black;
@@ -125,6 +166,17 @@ i{
     align-items: center;
     justify-content: center;
 }
+
+.add-to-cart-menu div {
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.add-to-cart-menu div:hover {
+    transform: translateY(-4px) scale(1.05);
+    color: #d63384;
+}
+
 
 
 /* Hero and Carousel Section CSS */
@@ -488,6 +540,7 @@ i{
     font-weight: 500;
 }
 
+
 .footer .title {
     color: #fff;
     margin-bottom: .5rem;
@@ -510,6 +563,10 @@ i{
     }
 }
 
+.ul-text{
+    font-size:0.625rem;line-height:175%;padding-left:3px;margin-top:-10px;
+}
+
 ul {
     list-style: none;
 }
@@ -521,4 +578,291 @@ li {
 
 .has-text-white {
     color: hsl(0, 0%, 100%) !important;
+}
+
+
+/* Satues Page CSS */
+
+.hero {
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header-image-text{
+    position: absolute;
+    margin-top: -13.5%;
+    top: 50%;
+    transform: translate(0%, -50%);
+    text-align: center;
+    width: 100%;
+    text-shadow: #000 2px 2px 4px;
+}
+
+.header-image-text h1{
+    margin-bottom: 1.5rem;
+}
+
+.header-image-text h1 {
+    animation: zoomFade 0.2s ease-in-out;
+}
+
+@keyframes zoomFade {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+.is-relative {
+    position: relative !important;
+}
+
+.mid-section img {
+    height: auto;
+    max-width: 100%;
+}
+
+.breadcrumb {
+    font-weight: 600;
+}
+
+nav.breadcrumb {
+    margin-bottom: .5rem !important;
+    padding: 10px 0px;
+    display: flex;
+    font-size: 0.875rem;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.breadcrumb ul{
+    margin-left: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.breadcrumb ul, .breadcrumb ol {
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    list-style: none;
+    text-align: center;
+}
+
+.is-justify-content-center {
+    justify-content: center !important;
+}
+
+.breadcrumb li {
+    align-items: center;
+    text-align: center;
+    display: flex;
+}
+
+.shear-option{
+    margin-top: 1%;
+    color: white;
+}
+
+.shear-option i{
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* Sidebar CSS */
+.d-flex {
+    display: flex !important;
+    width: 280px;
+    height: 100vh;
+    overflow-y: auto;
+    justify-content: flex-end;
+}
+
+.sidebar-section {
+    animation: slideLeft 0.8s ease-out;
+}
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(-40px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+.checkbox{
+    margin-right: 10px;
+    height: 15px;
+    width: 15px;
+}
+
+label{
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.content-container ul li{
+    margin-bottom: 10px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+#category-section{
+    display: flex;
+    gap: 10px;
+}
+
+/* Product Listing CSS */
+
+.image-container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.content-container{
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    flex-direction: row;
+}
+
+.box1{
+    border-radius: 5%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    margin: 20px;
+    height: 520px;
+    width: 320px;
+    padding: 0px 12px;
+    object-fit: cover;
+    margin: 3%;
+}
+
+.box1 img {
+  width: 100%;
+  height: 400px;
+  object-fit: contain;
+  display: block;
+  border-radius: 2%;
+}
+
+.box1 {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.box1:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+
+.product-textarea-title {
+    height: auto;     /* ✔ let text decide height */
+    max-height: 2.8em; /* optional clamp control */
+    margin-bottom: .5rem;
+    color: #000000d0;
+    width: 100%;
+    flex-wrap: wrap;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.price{
+    border: 3px solid #ebc588;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-radius: 20%;
+}
+
+.product-textarea-subtitle {
+    height: 1.125rem;
+    margin-bottom: .15rem;
+    font-size: 0.6rem;
+    color: #000000c6;
+}
+
+.is-family-secondary {
+    font-family: "Montserrat", sans-serif !important;
+}
+
+.is-uppercase {
+    text-transform: uppercase !important;
+}
+
+.is-size-6 {
+    font-size: 1rem !important;
+}
+
+.image-detail a {
+    color: #000;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.ellipsis {
+    display: -webkit-box;
+    display: block;
+    line-height: 1.4;
+    margin: 0 auto;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.price-section{
+    margin-top: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.product-textarea-finalprice{
+    color: black;
+    font-size: 1.2rem;
+}
+
+.product-small-tag{
+    background-color: #8bcd50;
+    border-radius: 10px;
+    width: 45%;
+    text-align: center;
+    font-size: 1rem;
+    height: auto;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.reveal{
+    opacity: 1;
+    transform: translateY(0);
 }
