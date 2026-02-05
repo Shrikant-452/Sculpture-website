@@ -65,7 +65,7 @@ const displayAllCategory = (data) => {
     });
   });
 };
-fetch("/data.json")
+fetch("../data.json")
   .then((response) => response.json())
   .then((data) => displayAllCategory(data))
   .catch((error) => console.error(error));

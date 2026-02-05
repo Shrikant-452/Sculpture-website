@@ -67,7 +67,7 @@ header{
 }
 
 .logo-container{
-    background-image: url("/image/vave_logo.png");
+    background-image: url("../image/vave_logo.png");
     background-size: cover;
     height: 80px;
     width: 80px;
@@ -848,7 +848,7 @@ label{
 }
 
 .product-small-tag{
-    background-color: #8bcd50;
+    background-color: #e96c3a;
     border-radius: 10px;
     width: 45%;
     text-align: center;
