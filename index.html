@@ -5,7 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="steyling.css">
-
+    <script>
+        function toggleMenu() {
+    const btn = document.getElementById('menuBtn');
+    const options = document.getElementById('menuOptions');
+    
+    btn.classList.toggle('active');
+    options.classList.toggle('active');
+}
+    </script>
 </head>
 <body>
     <script src="function.js"></script>
@@ -24,17 +32,30 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
             
-            <div class="nav-right">
-                <label for="menu-toggle" class="menu-toggle" tabindex="0">
-                    <span class="menu-line"></span>
-                    <span class="menu-line"></span>
-                    <span class="menu-line"></span>
-                </label>
+            <div >
                
-
-                <div class="cart-icon">
-                    🛒
-                    <span class="cart-count">3</span>
+                   <div class="menu-wrapper">
+    <button class="menu-btn" id="menuBtn" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </button>
+    
+    <div class="menu-options" id="menuOptions">
+        <a href='https://cdn.jotfor.ms/agent/embedjs/019c75a85b737e9fab5ffc8072df2c4369ba/embed.js' class="menu-item" style="--i:1">
+            <span class="icon">🤖</span> AI Assistant
+        </a>
+        <a href="./shoping-page/shopping_page.html" class="menu-item" style="--i:2">
+            <span class="icon">🛒</span> Shop
+        </a>
+        <a href="#footer" class="menu-item" style="--i:3">
+            <span class="icon">📁</span> Projects
+        </a>
+        <a href="#" class="menu-item" style="--i:4">
+            <span class="icon">💬</span> Support
+        </a>
+    </div>
+</div> 
                 </div>
             </div>
         </nav>
@@ -59,7 +80,7 @@
             <p>Designing elegant sculptures with timeless beauty</p>
             <div class="hero-buttons">
                 <a href="./shoping-page/shopping_page.html" class="btn primary">Shop Now</a>
-                <a href="#" class="btn outline">Explore Art</a>
+                <a href="#gallery-container_scroll-reveal" class="btn outline">Explore Art</a>
             </div>
         </div>
     </div>
@@ -72,28 +93,55 @@
         <h3>🎨 Artistic Design</h3>
         <p>Handcrafted sculptures with modern aesthetics.</p>
     </div>
-    <div class="feature">
-        <h3>📊 Admin Dashboard</h3>
+    <button class="feature" onclick="window.location.href='dashboard/index.html'">
+            <h3>📊 Admin Dashboard</h3>
         <p>Manage artworks, orders & analytics easily.</p>
-    </div>
-    <div class="feature">
+    </button>
+    <button class="feature" onclick="window.location.href='/Sculpture-website/shoping-page/index.html'">
         <h3>🚚 Global Delivery</h3>
         <p>Safe and secure worldwide shipping.</p>
-    </div>
+        </a>
+    </button>
 
 </section>
 <!-- Demo images -->
- <section class="dashboard">
+ <section id="dashboard">
+    <div class="dashboard-image"><img src="/Sculpture-website/image/s.jpg" alt="Dashboard Preview"></div>
     <h2>Dashboard Preview</h2>
     <p>Powerful admin panel with clean UI</p>
     
 </section>
-<section class="demo-images">
-    <div class="demo-image-1"></div>
-    <div class="demo-image-2"></div>
-    <div class="demo-image-3"></div>
+<section id="gallery-container_scroll-reveal">
+    <div class="slider">
+    <div class="slide-track2">
+            <div class="slide"><img src="/Sculpture-website/image/demo-1.jpg" alt="Work 1"></div>
+            <div class="slide"><img src="/Sculpture-website/image/demo-2.jpg" alt="Work 2"></div>
+            <div class="slide"><img src="/Sculpture-website/image/demo-3.jpg" alt="Work 3"></div>
+            <div class="slide"><img src="/Sculpture-website/image/balaji.jpg" alt="Work 4"></div>
+            <div class="slide"><img src="/Sculpture-website/image/boy-girl.jpg" alt="Work 5"></div>
+            <div class="slide"><img src="/Sculpture-website/image/girl.jpg" alt="Work 6"></div>
+            <div class="slide"><img src="/Sculpture-website/image/lion.jpg" alt="Work 7"></div>
+            <div class="slide"><img src="/Sculpture-website/image/qeen.jpg " alt="Work 8"></div>
+    </div>
+    </div>
 </section>
- 
+ <section class="gallery-container scroll-reveal">
+    <h2 class="section-title">Our Creative Portfolio</h2>
+    <div class="slider">
+        <div class="slide-track">
+            <div class="slide"><img src="/Sculpture-website/image/ganpati.jpg" alt="Work 1"></div>
+            <div class="slide"><img src="/Sculpture-website/image/ele.jpg" alt="Work 2"></div>
+            <div class="slide"><img src="/Sculpture-website/image/face.jpg" alt="Work 3"></div>
+            <div class="slide"><img src="/Sculpture-website/image/Lord_Shiva.jpg" alt="Work 4"></div>
+            <div class="slide"><img src="/Sculpture-website/image/basvana.jpg" alt="Work 5"></div>
+            <div class="slide"><img src="/Sculpture-website/image/devi.jpg" alt="Work 6"></div>
+            <div class="slide"><img src="/Sculpture-website/image/hanuman.jpg" alt="Work 7"></div>
+            
+            <div class="slide"><img src="/Sculpture-website/image/ele2.jpg" alt="Work 1"></div>
+            
+        </div>
+    </div>
+</section>
 
 
 <!-- Dashboard Preview -->
@@ -106,11 +154,51 @@
 </main>
 <!-- Footer -->
  
-<footer id="footer">
-    <p>© 2026 Sculptura • Designed with Canva Colors</p>
-</footer> 
 
-<script src='https://cdn.jotfor.ms/agent/embedjs/019c75a85b737e9fab5ffc8072df2c4369ba/embed.js'>
-</script>
+
+
+    <script src='https://cdn.jotfor.ms/agent/embedjs/019c75a85b737e9fab5ffc8072df2c4369ba/embed.js' ></script>
+
+
+    <footer id="footer">
+    <div class="footer-container">
+        <div class="footer-box about">
+            <div class="logo">P<span>anther</span></div>
+            <p>Empowering creators with high-speed analytics and professional design tools. Building the future of digital architecture.</p>
+        </div>
+
+        <div class="footer-box links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#team">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-box contact">
+            <h3>Contact Us</h3>
+            <p>📍 Market yard solapur</p>
+            <p>📧 shrikantbirajdar452@gmail.com</p>
+            <p>📞 +1 (555) 885-7427</p>
+        </div>
+
+        <div class="footer-box social">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href=" https://wa.me/15558857427" class="icon-circle whatsapp" title="WhatsApp"><img src="/Sculpture-website/image/Whatsapp-img.png" alt="WA"></a>
+                <a href="https://www.instagram.com/mr_shri_birajdar/" class="icon-circle instagram" title="Instagram"><img src="/Sculpture-website/image/instagram.png" alt="IG"></a>
+                <a href="#" class="icon-circle facebook" title="Facebook"><img src="/Sculpture-website/image/Facebook.png" alt="FB"></a>
+                <a href="#" class="icon-circle twitter" title="Twitter"><img src="/Sculpture-website/image/twitter.png" alt="TW"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 Panther Digital Solutions. Designed by Srikanth.</p>
+    </div>
+</footer>
+
 </body>
 </html>
