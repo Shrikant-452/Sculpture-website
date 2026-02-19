@@ -46,7 +46,7 @@
         }
 
         .nav-logo {
-            background-image: url("/Sculpture-website/image/vave_logo.png");
+            background-image: url("/image/vave_logo.png");
             background-size: cover;
             height: 90px;
             width: 80px;
@@ -94,6 +94,10 @@
             border-radius: 50%;
             background: #FFB94B;
             transition: all 0.3s ease;
+        }
+
+        .cart-icon a {
+            text-decoration: none;
         }
 
         .cart-icon:hover {
@@ -436,17 +440,17 @@
         }
 
         .demo-image-1 {
-            background-image: url('/Sculpture-website/image/demo-1.jpg');
+            background-image: url('/image/demo-1.jpg');
             background-size:cover;
         }
 
         .demo-image-2 {
-            background-image: url('/Sculpture-website/image/demo-2.jpg');
+            background-image: url('/image/demo-2.jpg');
             background-size: cover;
         }
 
         .demo-image-3 {
-            background-image: url('/Sculpture-website/image/demo-3.jpg');
+            background-image: url('/image/demo-3.jpg');
             background-size: cover;
         }
 

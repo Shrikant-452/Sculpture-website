@@ -1,23 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="shopping.css">
     <link rel="stylesheet" href="media-quary.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <title>Modern Sculpture Studio</title>
 </head>
-
 <body>
-
-    <header class="head-section">
+    <header class="head-section" >
         <div class="logo-container"></div>
         <nav class="navbar">
             <form>
@@ -31,7 +25,10 @@
                                 <option>Clothing</option>
                             </select>
                         </div>
-                        <input type="text" placeholder="Search beautiful sculpture" />
+                        <input
+                            type="text"
+                            placeholder="Search beautiful sculpture"
+                        />
 
                         <button type="button" title="button" class="search-btn">
                             <i class="bi bi-search"></i>
@@ -59,136 +56,32 @@
             </div>
         </div>
     </header>
-
-    <section class="middle-section">
-        <div class="hero-section ">
-            <div class="carousel-image">
-                <section class="hero">
-                    <div class="slider">
-                        <div class="slide active">
-                            <img src="../image/hindustatue.jpeg.webp" alt="">
-                        </div>
-                        <div class="slide">
-                            <img src="../image/buddhist.jpeg.webp" alt="">
-                        </div>
-                        <div class="slide">
-                            <img src="../image/replublicday-2026-sale.webp" alt="">
-                        </div>
-                    </div>
-                    <div class="controls">
-                        <button type="button" id="prev">&#10094;</button>
-                        <button type="button" id="next">&#10095;</button>
-                    </div>
-                    <div class="dots">
-                        <span class="dot active"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                    </div>
-                </section>
-                <div class="left-side-image">
-                    <img src="https://cdn.exoticindia.com/images/products/banners/free-static-1.webp" alt="" width="600"
-                        height="400">
+    <div class="add-to-cart-serction" id="add-to-cart-serction">
+        <div class="cart-wrapper" id="cart-container">
+            
+        </div>
+        <div class="cart-summary-section">
+            <div id="cart-summary">
+                <h4>Cart Totals</h4>
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="subtotal">Rs.0</span>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping & Handling</span>
+                    <span id="shipping">Rs.0</span>
+                </div>
+                <hr>
+                <div class="summary-row">
+                    <span>Total</span>
+                    <span id="total">Rs.0</span>
+                </div>
+                <div class="checkout-buttons">
+                    <button type="button" class="save-later-btn">Proceed to Checkout</button>
                 </div>
             </div>
         </div>
-
-        <div class="product-category">
-            <div class="product-title">Shop by Category</div>
-            <div class="product-category-images">
-                <div class="categories-container category-box" id="category-box"></div>
-                <div class="has-text-centered mt-5 see-all-category pt-3">
-                    <button type="button" class="button is-small is-black is-rounded more-subjects" id="view-more-option"
-                    rel-perpage="12">+ More</button>
-                </div>
-            </div>
-            <div class="explore-container">
-            <div class="shape-list-header-footer explore-image"><img
-                    src="https://cdn.exoticindia.com/images/homepage-explore-top-bg.svg" alt="" loading="lazy"
-                    width="100%" height="auto"></div>
-                <div class="explore-category-images">
-                    <div class="explore-section">
-                        <div class="home-categories-list">
-                            <div class="title is-size-4 is-size-3-desktop is-size-2-widescreen has-text-centered explore-tital">Explore our categories</div>
-                            <div class="categories-container explore-box">
-                                <div class="column has-text-centered is-4-touch is-2-desktop box">
-                                    <div class="px-2">
-                                        <a href="/sculptures/hindu/" title="">
-                                            <img src="https://cdn.exoticindia.com/images/products/home-subjects/hindu-statues.webp"
-                                                class="explore-section-image" title="Hindu Statues" alt="Hindu Statues"
-                                                width="155" height="155">
-                                        </a>
-                                    </div>
-                                    <div class="title is-size-7 is-size-6-desktop is-family-secondary is-uppercase pt-3">
-                                        <a href="/sculptures/hindu/" title="Hindu Statues">Hindu Statues</a>
-                                    </div>
-                                </div>
-                                <div class="column has-text-centered is-4-touch is-2-desktop box">
-                                    <div class="px-2">
-                                        <a href="/sculptures/brass/" title="">
-                                            <img src="https://cdn.exoticindia.com/images/products/home-subjects/Brass-statue.webp"
-                                        class="explore-section-image" title="Brass Statues" alt="Brass Statues"
-                                        width="155" height="155">
-                                        </a>
-                                    </div>
-                                    <div class="title is-size-7 is-size-6-desktop is-family-secondary is-uppercase pt-3"><a
-                                    href="/sculptures/brass/" title="Brass Statues">Brass Statues</a></div>
-                                </div>
-                                <div class="column has-text-centered is-4-touch is-2-desktop box">
-                                    <div class="px-2">
-                                        <a href="/sculptures/smallstatues/" title="">
-                                            <img src="https://cdn.exoticindia.com/images/products/home-subjects/Small-statue.webp"
-                                            class="explore-section-image" title="Small Statues" alt="Small Statues"
-                                            width="155" height="155">
-                                        </a>
-                                    </div>
-                                    <div class="title is-size-7 is-size-6-desktop is-family-secondary is-uppercase pt-3"><a
-                                    href="/sculptures/smallstatues/" title="Small Statues">Small Statues</a></div>
-                                </div>
-                                <div class="column has-text-centered is-4-touch is-2-desktop box">
-                                    <div class="px-2">
-                                        <a href="/sculptures/bronze/" title="">
-                                            <img src="https://cdn.exoticindia.com/images/products/home-subjects/bronze-statues.webp"
-                                                class="explore-section-image" title="Bronze Statues" alt="Bronze Statues"
-                                                width="155" height="155">
-                                        </a>
-                                    </div>
-                                    <div class="title is-size-7 is-size-6-desktop is-family-secondary is-uppercase pt-3"><a
-                                            href="/sculptures/bronze/" title="Bronze Statues">Bronze Statues</a></div>
-                                </div>
-                                <div class="column has-text-centered is-4-touch is-2-desktop box">
-                                    <div class="px-2">
-                                        <a href="/sculptures/nepalese/">
-                                            <img src="https://cdn.exoticindia.com/images/products/home-subjects/Nepalese.webp"
-                                                class="explore-section-image" title="Nepalese Statues" alt="Nepalese Statues"
-                                                width="155" height="155">
-                                        </a>
-                                    </div>
-                                    <div class="title is-size-7 is-size-6-desktop is-family-secondary is-uppercase pt-3"><a
-                                    href="/sculptures/nepalese/" title="Nepalese Statues">Nepalese Statues</a></div>
-                                </div>
-                                <div class="column has-text-centered is-4-touch is-2-desktop box">
-                                    <div class="px-2">
-                                        <a href="/sculptures/hindu/wood-statues/">
-                                            <img src="https://cdn.exoticindia.com/images/products/home-subjects/Hindu-wood-statues.webp"
-                                                class="explore-section-image" title="Hindu Wood Statues"
-                                                alt="Hindu Wood Statues" width="155" height="155">
-                                        </a>
-                                    </div>
-                                    <div class="title is-size-7 is-size-6-desktop is-family-secondary is-uppercase pt-3"><a
-                                            href="/sculptures/hindu/wood-statues/" title="Hindu Wood Statues">Hindu Wood
-                                            Statues</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="shape-list-header-footer">
-                            <img src="https://cdn.exoticindia.com/images/homepage-explore-bottom-bg.svg" alt="" loading="lazy" width="100%" height="auto">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
 
     <div class="footer-section">
         <div class="wave-border"></div>
@@ -318,8 +211,6 @@
         </footer>
     </div>
 
-    <script src="shopping.js"></script>
-    <script src="category.js"></script>
+    <script src="./addToCart.js"></script>
 </body>
-
 </html>

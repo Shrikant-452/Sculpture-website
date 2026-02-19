@@ -30,6 +30,7 @@ const displayImageByCategory = () => {
 
 //Display Image Category
 const displayAllCategory = (data) => {
+  localStorage.setItem("ImageData", JSON.stringify(data));
   let displaycategory = document.getElementById("category-section");
   let imageContainer = document.getElementById("image-container");
   displaycategory.innerHTML = "";
@@ -39,23 +40,28 @@ const displayAllCategory = (data) => {
     let count = data[category].length;
     displaycategory.innerHTML += `
       <li>
-        <input type="checkbox" class="checkbox" value="${category}" value="${category}" onclick="displayImageByCategory()">
+        <input type="checkbox" class="checkbox" value="${category}" onclick="displayImageByCategory()">
         <label>${category}  (${count})</label>
       </li>
     `;
     data[category].forEach((item) => {
-      imageContainer.innerHTML += `<div class="box1" data-category="${item.category}">
-                <img src="${item.img}" alt="" height="400" width="300" >
+      imageContainer.innerHTML += `<div class="box1 " data-category="${item.category}" >
+                <a href="#"><img src="${item.img}" alt="" height="400" width="300" onclick="displayImagedetail('${item.id}', '${item.category}')"></a>
+                <div class="image-overlay">
+                    <i class="bi bi-heart" title="Add to Wishlist" onclick="addToWishlist('${item.id}', '${item.category}')"></i>
+                    <i class="bi bi-eye" title="View Details" onclick="displayImagedetail('${item.id}', '${item.category}')"></i>
+                    <i class="bi bi-cart" title="Add to Cart" onclick="displayImagedetail('${item.id}', '${item.category}')"></i>
+                </div>
                 <div class="image-detail">
                     <div class="product-textarea-title is-size-6 has-text-weight-medium ellipsis is-ellipsis-2">
-                        <a href="/product/sculptures/2-small-standing-lord-vishnu-in-blessing-gesture-copper-statue-ddu718/" title="2&quot; Small Standing Lord Vishnu in Blessing Gesture | Copper Statue">${item.tital}</a>
+                        <a href="/shoping-page/order_Page.html" title="2&quot; Small Standing Lord Vishnu in Blessing Gesture | Copper Statue">${item.tital}</a>
                     </div>
                     <div class="product-textarea-subtitle is-size-7 ellipsis is-ellipsis-1 is-family-secondary is-uppercase">
                         ${item.subtitle}
                     </div>
                     <div>
                         <div class="is-flex is-flex-wrap-wrap is-align-items-center price-section">
-                            <div class="product-textarea-price is-size-6-touch is-size-5-desktop has-text-weight-medium mr-1            product-textarea-finalprice price">Rs.${item.price}
+                            <div class="product-textarea-price is-size-6-touch is-size-5-desktop has-text-weight-medium mr-1 product-textarea-finalprice price">Rs.${item.price}
                             </div>
                             <div class="product-small-tag success has-text-black has-family-secondary ">Express Shipping</div>
                         </div>
@@ -118,3 +124,24 @@ window.addEventListener("scroll", () => {
     }
   });
 });
+
+function displayImagedetail(id, category) {
+  const data = JSON.parse(localStorage.getItem("ImageData"));
+  const selectedItem = data[category].find((el) => el.id === Number(id));
+  localStorage.setItem("selectedItem", JSON.stringify(selectedItem));
+  window.location.href = "/shoping-page/order_Page.html";
+}
+
+function addToWishlist(id, category) {
+  console.log("Wishlist toggled for item ID:", id, "Category:", category);
+  let data = JSON.parse(localStorage.getItem("ImageData"));
+  let selectedItem = data[category].find((el) => el.id === Number(id));
+  let wishlistItems = JSON.parse(localStorage.getItem("wishlistItems")) || [];
+  if (wishlistItems.some((item) => item.id === selectedItem.id)) {
+    alert("Item is already in the wishlist!");
+    return;
+  }
+  wishlistItems.push(selectedItem);
+  localStorage.setItem("wishlistItems", JSON.stringify(wishlistItems));
+  alert("Item added to wishlist!");
+}

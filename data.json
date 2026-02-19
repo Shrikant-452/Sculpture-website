@@ -73,6 +73,14 @@
       "tital":"Large Size Nandi Brass Statue, Lord Shiva’s Mount | Handmade | Made in India",
       "subtitle":"56 cm Height X 89 cm Width X 35.5 cm Length",
       "price":"1,10,120"
+    },
+    {
+      "id":5,
+      "category":"Shiva",
+      "img":"../Hindu Statues/h12.webp",
+      "tital":"13 Superfine Standing Gesture Lord Shiva with Damaru",
+      "subtitle":"33.5 cm Height X 20.5 cm Width X 11 cm Length",
+      "price":"21,320"
     }
   ],
   "Hanuman":[
@@ -121,7 +129,7 @@
   ],
   "Ganesha":[
     {
-      "id":15,
+      "id":1,
       "category":"Ganesha",
       "img":"../Hindu Statues/h7.webp",
       "tital":"12 Lord Ganesha Seated on Small Round Chowki In Brass | Handmade | Made In India",
@@ -129,7 +137,7 @@
       "price":"19,170"
     },
     {
-      "id":16,
+      "id":2,
       "category":"Ganesha",
       "img":"../Hindu Statues/h18.webp",
       "tital":"8 Superfine Chaturbhuja Lord Ganapati Holding Modak on Wood Base | Brass Statue",
@@ -137,7 +145,7 @@
       "price":"15,330"
     },
     {
-      "id":20,
+      "id":3,
       "category":"Ganesha",
       "img":"../Hindu Statues/h20.webp",
       "tital":"24 Blessing Turbaned (Pagadi) Ganesha | White Marble Statue",
@@ -147,7 +155,7 @@
   ],
   "Load Rama":[
     {
-      "id":17,
+      "id":1,
       "category":"Load Rama",
       "img":"../Hindu Statues/h2.webp",
       "tital":"Superfine Shri Rama Darbar Brass Statue | Different Sizes",
@@ -155,7 +163,7 @@
       "price":"15,120"
     },
     {
-      "id":18,
+      "id":2,
       "category":"Load Rama",
       "img":"../Hindu Statues/h9.webp",
       "tital":"7 Superfine Ram Lalla Statue in Brass | Housewarming Gift",
@@ -163,7 +171,7 @@
       "price":"9775"
     },
     {
-      "id":19,
+      "id":3,
       "category":"Load Rama",
       "img":"../Hindu Statues/h19.webp",
       "tital":"12 Shri Ram Darbar | Set of Four White Marble Statues",

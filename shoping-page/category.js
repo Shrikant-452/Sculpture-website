@@ -4,7 +4,7 @@ const displayCategoryContainer = (data) => {
   Object.keys(data).forEach((item) => {
     const element = data[item];
     imageSection.innerHTML += `<div class="column has-text-centered is-4-touch is-2-desktop">
-                    <div class="px-2">
+                    <div class="px-2  box category-box-img">
                         <a href="../shoping-page/statues.html" title="${element.title}"><img src="${element.img}" title="Hindu Statues" alt="${element.title}" width="155" height="155">
                         </a> 
                     </div>
