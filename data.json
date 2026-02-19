@@ -1,0 +1,183 @@
+{
+  "Vishnu": [
+    {
+      "id":1,
+      "category":"Vishnu",
+      "img":"../Hindu Statues/h1.webp",
+      "tital":"2 Small Standing Lord Vishnu in Blessing Gesture | Copper Statue",
+      "subtitle":"5.5 cm Height X 3 cm Width X 2.5 cm Length",
+      "price":"1735"
+    },
+    {
+      "id":2,
+      "category":"Vishnu",
+      "img":"../Hindu Statues/h4.webp",
+      "tital":"6 Brass Superfine Lord Dhanvantari Statue | God of Ayurveda & Healing",
+      "subtitle":"15 cm Height X 10 cm Width X 5 cm Length",
+      "price":"2625"
+    },
+    {
+      "id":3,
+      "category":"Vishnu",
+      "img":"../Hindu Statues/h5.webp",
+      "tital":"Superfine Lord Vishnu Idol Standing on Lotus | Brass Statue",
+      "subtitle":"10 cm Height X 4 cm Width X 2.5 cm Length",
+      "price":"1575"
+    },
+    {
+      "id":4,
+      "category":"Vishnu",
+      "img":"../Hindu Statues/h13.webp",
+      "tital":"3 Small Four Armed Lord Vishnu Seated on Sheshnag Throne | Handmade | Copper Statue",
+      "subtitle":"8 cm Height X 5 cm Width X 4.5 cm Length",
+      "price":"2940"
+    },
+    {
+      "id":5,
+      "category":"Vishnu",
+      "img":"../Hindu Statues/h14.webp",
+      "tital":"66 Exquisite Lord Tirupati Balaji (Venkateshvara) Statue with Ornate Stone Work",
+      "subtitle":"169.5 cm Height X 75 cm Width X 40.5 cm Length",
+      "price":"3,41,250"
+    }
+  ],
+  "Shiva":[
+    {
+      "id":1,
+      "category":"Shiva",
+      "img":"../Hindu Statues/h3.webp",
+      "tital":"6 Small Superfine Blessing Lord Shiva Seated on Nandi | Brass Statue",
+      "subtitle":"15 cm Height X 12.5 cm Width X 5 cm Length",
+      "price":"4620"
+    },
+    {
+      "id":2,
+      "category":"Shiva",
+      "img":"../Hindu Statues/h10.webp",
+      "tital":"6 Bhagawan Shiva In Brass | Handmade | Made In India",
+      "subtitle":"16.5 cm Height x 12.5 cm Width x 7.5 cm Depth",
+      "price":"2520"
+    },
+    {
+      "id":3,
+      "category":"Shiva",
+      "img":"../Hindu Statues/h12.webp",
+      "tital":"13 Superfine Standing Gesture Lord Shiva with Damaru",
+      "subtitle":"33.5 cm Height X 20.5 cm Width X 11 cm Length",
+      "price":"21,320"
+    },
+    {
+      "id":4,
+      "category":"Shiva",
+      "img":"../Hindu Statues/h11.webp",
+      "tital":"Large Size Nandi Brass Statue, Lord Shiva’s Mount | Handmade | Made in India",
+      "subtitle":"56 cm Height X 89 cm Width X 35.5 cm Length",
+      "price":"1,10,120"
+    },
+    {
+      "id":5,
+      "category":"Shiva",
+      "img":"../Hindu Statues/h12.webp",
+      "tital":"13 Superfine Standing Gesture Lord Shiva with Damaru",
+      "subtitle":"33.5 cm Height X 20.5 cm Width X 11 cm Length",
+      "price":"21,320"
+    }
+  ],
+  "Hanuman":[
+    {
+      "id":1,
+      "category":"Hanuman",
+      "img":"../Hindu Statues/h6.webp",
+      "tital":"24 Panchamukhi Hanuman Statue with Beautifully Carved Prabhavali ",
+      "subtitle":"61 cm Height X 40.5 cm Width X 20.5 cm Length",
+      "price":"64,520"
+    },
+    {
+      "id":2,
+      "category":"Hanuman",
+      "img":"../Hindu Statues/h15.webp",
+      "tital":"21 Panchamukhi Hanuman Statue with Beautifully Carved Prabhavali ",
+      "subtitle":"53.5 cm Height X 23 cm Width X 11.5 cm Length",
+      "price":"73,520"
+    }
+  ],
+  "Krishna":[
+    {
+      "id":1,
+      "category":"Krishna",
+      "img":"../Hindu Statues/h8.webp",
+      "tital":"Superfine Standing Lord Krishna Brass Statue Playing Flute",
+      "subtitle":"12.5 cm Height X 2.inch Width X 4 cm Length ",
+      "price":"1850"
+    },
+    {
+      "id":2,
+      "category":"Krishna",
+      "img":"../Hindu Statues/h16.webp",
+      "tital":"Large Size Radha Krishna with Arch Showing Krishna Leela",
+      "subtitle":"Arch-114.5 cm x 76 cm x 25.5 cmRadha ",
+      "price":"10850"
+    },
+    {
+      "id":3,
+      "category":"Krishna",
+      "img":"../Hindu Statues/h17.webp",
+      "tital":"10 Radha Krishna Idol with Cow | Handmade Brass Statue | Made in India",
+      "subtitle":"26.5 cm Height x 19 cm Width x 14.5 cm Depth ",
+      "price":"11,050"
+    }
+  ],
+  "Ganesha":[
+    {
+      "id":1,
+      "category":"Ganesha",
+      "img":"../Hindu Statues/h7.webp",
+      "tital":"12 Lord Ganesha Seated on Small Round Chowki In Brass | Handmade | Made In India",
+      "subtitle":"31 cm HEIGHT x 21.5 cm WIDTH x 15.5 cm DEPTH ",
+      "price":"19,170"
+    },
+    {
+      "id":2,
+      "category":"Ganesha",
+      "img":"../Hindu Statues/h18.webp",
+      "tital":"8 Superfine Chaturbhuja Lord Ganapati Holding Modak on Wood Base | Brass Statue",
+      "subtitle":"21.5 cm Height X 15 cm Width X 11.5 cm Length ",
+      "price":"15,330"
+    },
+    {
+      "id":3,
+      "category":"Ganesha",
+      "img":"../Hindu Statues/h20.webp",
+      "tital":"24 Blessing Turbaned (Pagadi) Ganesha | White Marble Statue",
+      "subtitle":"61 cm Height X 43 cm Width X 23 cm Length ",
+      "price":"1,15,330"
+    }
+  ],
+  "Load Rama":[
+    {
+      "id":1,
+      "category":"Load Rama",
+      "img":"../Hindu Statues/h2.webp",
+      "tital":"Superfine Shri Rama Darbar Brass Statue | Different Sizes",
+      "subtitle":"14.5 cm Height X 18 cm Width X 12 cm Length ",
+      "price":"15,120"
+    },
+    {
+      "id":2,
+      "category":"Load Rama",
+      "img":"../Hindu Statues/h9.webp",
+      "tital":"7 Superfine Ram Lalla Statue in Brass | Housewarming Gift",
+      "subtitle":"20 cm Height X 11.5 cm Width X 7 cm Length ",
+      "price":"9775"
+    },
+    {
+      "id":3,
+      "category":"Load Rama",
+      "img":"../Hindu Statues/h19.webp",
+      "tital":"12 Shri Ram Darbar | Set of Four White Marble Statues",
+      "subtitle":"30.5 cm Height X 12.5 cm Width X 6.5 cm Length ",
+      "price":"93,775"
+    }
+  ]
+
+}

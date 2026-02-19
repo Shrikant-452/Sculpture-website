@@ -20,6 +20,7 @@
             position: fixed;
             color: white;
             background-color: #E9BC8B;
+            -webkit-backdrop-filter: blur(9px);
             backdrop-filter: blur(9px);
             top: 15px;
             left: 50%;
