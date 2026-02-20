@@ -838,10 +838,24 @@ body {
 .slide-track2 {
     display: flex;
     width: calc(300px * 14);
-    animation: scrollInfinite2 25s linear infinite;
+    animation: scrollInfinite2 18s linear infinite;
 }
 
-.slide { width: 300px; padding: 10px; }
+.slide { width: 300px; padding: 10px;
+    
+
+}
+
+
+
+.info-overlay h3 {
+    border-bottom: 2px solid orange;
+    
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    
+}
+
 .slide img {
     width: 100%;
     height: 180px;
@@ -856,9 +870,7 @@ body {
     box-shadow: #4F7F84 2px 2px 10px, #739C77 0px 0px 20px;
 }
 
-.slider:hover .slide-track { animation-play-state: paused; }
 
-.slider:hover .slide-track2 { animation-play-state: paused; }
 
 @keyframes scrollInfinite {
     0% { transform: translateX(0); }
@@ -866,8 +878,8 @@ body {
 }
 
 @keyframes scrollInfinite2 {
-    0% { transform: translateX(-1200px ); }
-    100% { transform: translateX(calc(300px * 7)); }
+    0% { transform: translateX(calc(-300px * 7)); }
+    100% { transform: translateX(0); }
 }
 /* Entrance Animations */
 .scroll-reveal {
@@ -880,6 +892,277 @@ body {
     to { opacity: 1; transform: translateY(0); }
 }
 
+
+/* oner  */
+:root {
+    --primary-bg: #DBD7D3;       /* Burnt Umber */
+    --card-bg: #CB674C;          /* Deep Terracotta Shadow */
+    --accent-gold: #d4a373;      /* Toasted Almond / Sandstone */
+    --text-main: #fefae0;        /* Parchment White */
+    --text-dim: #bc6c25;         /* Rust Orange */
+}
+
+
+
+/* --- 2. LAYOUT WRAPPER --- */
+.founder-wrapper {
+    min-height: 120vh; /* Extra height to test the scroll animation */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 5%;
+}
+
+.founder-card {
+    background: var(--card-bg);
+    display: flex;
+    max-width: 1100px;
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 40px 100px rgba(0,0,0,0.6);
+    
+    /* Animation: Initial State */
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 1.2s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.founder-card.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- 3. IMAGE AUTO-SIZE & ANIMATION --- */
+.founder-visual {
+    flex: 1;
+    position: relative;
+    min-height: 600px;
+    overflow: hidden;
+    opacity: 0;
+    transform: scale(1.1);
+    transition: all 1.5s ease;
+}
+
+.founder-card.active .founder-visual {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.founder-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Professional auto-sizing */
+    display: block;
+    filter: grayscale(20%);
+    transition: transform 0.8s ease;
+}
+
+.founder-card:hover .founder-visual img {
+    transform: scale(1.05);
+}
+
+/* --- 4. STAGGERED TEXT ANIMATIONS --- */
+.founder-content {
+    flex: 1.2;
+    padding: 80px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* We hide all content pieces initially */
+.company-name, 
+.founder-name, 
+.experience-badge, 
+.founder-statement, 
+.stats-row, 
+.cta-button {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Reveal sequence when card becomes active */
+.founder-card.active .company-name      { opacity: 1; transform: translateY(0); transition-delay: 0.4s; }
+.founder-card.active .founder-name       { opacity: 1; transform: translateY(0); transition-delay: 0.5s; }
+.founder-card.active .experience-badge   { opacity: 1; transform: translateY(0); transition-delay: 0.6s; }
+.founder-card.active .founder-statement  { opacity: 1; transform: translateY(0); transition-delay: 0.7s; }
+.founder-card.active .stats-row         { opacity: 1; transform: translateY(0); transition-delay: 0.8s; }
+.founder-card.active .cta-button        { opacity: 1; transform: translateY(0); transition-delay: 0.9s; }
+
+/* --- 5. CONTENT STYLING --- */
+.company-name {
+    color: var(--accent-gold);
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+}
+
+.founder-name {
+    font-size: 3.5rem;
+    font-family: 'Playfair Display', serif;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.experience-badge {
+    background: rgba(184, 115, 51, 0.1);
+    color: var(--accent-gold);
+    padding: 6px 16px;
+    font-size: 0.8rem;
+    border-radius: 30px;
+    width: fit-content;
+    margin-bottom: 30px;
+    border: 1px solid var(--accent-gold);
+}
+
+.founder-statement {
+    color: var;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+.stats-row {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.stat .number {
+    display: block;
+    font-size: 1.8rem;
+    color: var(--accent-gold);
+    font-weight: bold;
+}
+
+.stat .label {
+    color: #DBD7D3;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+}
+
+.cta-button {
+    text-decoration: none;
+    background: #499FA4;
+            color: white;
+    border: 1px solid var(--accent-gold);
+    padding: 18px 40px;
+    border-radius: 15px;
+    width: fit-content;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.1s;
+    transition: all 0.1s ease-in-out;
+}
+
+.cta-button:hover {
+   background: #3D4A55;
+            transform: translateY(-2px);
+            transform:  translateY(-2px) scale(1.05);
+}
+
+/* --- 6. RESPONSIVENESS --- */
+@media (max-width: 900px) {
+    .founder-card { flex-direction: column; }
+    .founder-visual { min-height: 400px; }
+    .founder-content { padding: 40px 30px; }
+}
+
+
+
+
+/* ----------------------------------secvice */
+
+main-wrapper {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 50px;
+    color: #D4AF37; /* Gold Color */
+}
+
+/* The Main Div containing the cards */
+.services-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows cards to wrap to next line */
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* The Individual "Server" or Info Divs */
+.service-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 15px;
+    flex: 1 1 300px; /* Flex-grow, Flex-shrink, Basis */
+    max-width: 400px;
+    transition: transform 0.3s ease;
+    backdrop-filter: blur(10px); /* Glass effect */
+}
+
+.service-card:hover {
+    border-color: #D4AF37;
+    transform: translateY(-10px);
+}
+
+.icon {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.service-card h2 {
+    margin-bottom: 15px;
+    color: #D4AF37;
+}
+
+/* --- ANIMATION STYLES --- */
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+.reveal.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* --- MEDIA QUERIES (Auto-Size) --- */
+
+/* For Tablets */
+@media (max-width: 992px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    .service-card {
+        flex: 1 1 45%; /* Two cards per row */
+    }
+}
+
+/* For Mobile Phones */
+@media (max-width: 600px) {
+    .main-wrapper {
+        padding: 40px 10px;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    .service-card {
+        flex: 1 1 100%; /* One card per row */
+        padding: 20px;
+    }
+}
 
 /*  -------------footer */
 

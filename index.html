@@ -13,6 +13,38 @@
     btn.classList.toggle('active');
     options.classList.toggle('active');
 }
+
+  document.addEventListener("DOMContentLoaded", function() {
+    const observerOptions = {
+        threshold: 0.2 // Trigger when 20% of the element is visible
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                // Optional: Stop observing once the animation has played
+                // observer.unobserve(entry.target); 
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal-on-scroll').forEach((el) => {
+        observer.observe(el);
+    });
+});
+ function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
     </script>
 </head>
 <body>
@@ -114,14 +146,135 @@
 <section id="gallery-container_scroll-reveal">
     <div class="slider">
     <div class="slide-track2">
-            <div class="slide"><img src="/Sculpture-website/image/demo-1.jpg" alt="Work 1"></div>
-            <div class="slide"><img src="/Sculpture-website/image/demo-2.jpg" alt="Work 2"></div>
-            <div class="slide"><img src="/Sculpture-website/image/demo-3.jpg" alt="Work 3"></div>
-            <div class="slide"><img src="/Sculpture-website/image/balaji.jpg" alt="Work 4"></div>
-            <div class="slide"><img src="/Sculpture-website/image/boy-girl.jpg" alt="Work 5"></div>
-            <div class="slide"><img src="/Sculpture-website/image/girl.jpg" alt="Work 6"></div>
-            <div class="slide"><img src="/Sculpture-website/image/lion.jpg" alt="Work 7"></div>
-            <div class="slide"><img src="/Sculpture-website/image/qeen.jpg " alt="Work 8"></div>
+
+         <div class="slide">
+    <img src="/Sculpture-website/image/demo-1.jpg" alt="Mahadev Sculpture">
+    <div class="info-overlay">
+        <h3>Mahadev</h3>
+        <p>This sculpture depicts the supreme yogi in deep meditation. Representing cosmic balance, his form includes the Trishula for time and the Damru for creation. He is the destroyer of evil and the source of ultimate spiritual power.</p>
+    </div>
+</div>   
+        <div class="slide">
+    <img src="/Sculpture-website/image/demo-2.jpg" alt="Lord Nataraja Sculpture">
+    <div class="info-overlay">
+        <h3>Lord Nataraja</h3>
+        <p>This bronze sculpture depicts Shiva as the cosmic dancer. His movement symbolizes the continuous cycle of creation, preservation, and destruction. Surrounded by a ring of fire, he represents the eternal energy and rhythm of the universe.</p>
+    </div>
+</div>
+
+        <div class="slide">
+    <img src="/Sculpture-website/image/demo-3.jpg" alt="Stone Hanuman Sculpture">
+    <div class="info-overlay">
+        <h3>Bajrangbali</h3>
+        <p>A powerful stone sculpture of Lord Hanuman, the symbol of selfless service and strength. His resolute expression and iconic mace represent unwavering protection, courageous heart, and total devotion to the divine path.</p>
+    </div>
+</div>
+
+       <div class="slide">
+    <img src="/Sculpture-website/image/balaji.jpg" alt="Tirupati Balaji Sculpture">
+    <div class="info-overlay">
+        <h3>Tirupati Balaji</h3>
+        <p>A majestic relief of Lord Venkateswara, featuring the iconic Shanka (conch) and Chakra (wheel). This sculpture symbolizes divine protection, the preservation of cosmic order, and the granting of boons to all who seek his grace.</p>
+    </div>
+</div> 
+
+       <div class="slide">
+    <img src="/Sculpture-website/image/boy-girl.jpg" alt="Clay Couple Sculpture">
+    <div class="info-overlay">
+        <h3>Shared Moments</h3>
+        <p>A raw terracotta-style sculpture capturing a quiet, everyday conversation between a couple and their loyal dog. It represents the beauty of companionship, human connection, and the simple, grounding joys of life.</p>
+    </div>
+</div>
+
+        <div class="slide">
+    <img src="/Sculpture-website/image/girl.jpg" alt="Meditating Girl Sculpture">
+    <div class="info-overlay">
+        <h3>Inner Silence</h3>
+        <p>A minimalist terracotta sculpture capturing a moment of deep introspection. This piece symbolizes the search for inner peace, stillness of the mind, and the raw, earthy beauty of handcrafted clay artistry.</p>
+    </div>
+</div>
+
+     <div class="slide">
+    <img src="/Sculpture-website/image/lion.jpg" alt="Lion Guardian Sculpture">
+    <div class="info-overlay">
+        <h3>Lion Guardians</h3>
+        <p>This pair of wooden lions symbolizes protection, courage, and nobility. Traditionally used as gatekeepers, these sculptures represent vigilance and the strength required to maintain peace while warding off negative energies from a sacred space.</p>
+    </div>
+</div>
+
+         <div class="slide">
+    <img src="/Sculpture-website/image/girl.jpg" alt="Meditating Girl Sculpture">
+    <div class="info-overlay">
+        <h3>Inner Silence</h3>
+        <p>A minimalist terracotta sculpture capturing a moment of deep introspection. This piece symbolizes the search for inner peace, stillness of the mind, and the raw, earthy beauty of handcrafted clay artistry.</p>
+    </div>
+</div>  
+
+  <div class="slide">
+    <img src="/Sculpture-website/image/demo-1.jpg" alt="Mahadev Sculpture">
+    <div class="info-overlay">
+        <h3>Mahadev</h3>
+        <p>This sculpture depicts the supreme yogi in deep meditation. Representing cosmic balance, his form includes the Trishula for time and the Damru for creation. He is the destroyer of evil and the source of ultimate spiritual power.</p>
+    </div>
+</div>   
+        <div class="slide">
+    <img src="/Sculpture-website/image/demo-2.jpg" alt="Lord Nataraja Sculpture">
+    <div class="info-overlay">
+        <h3>Lord Nataraja</h3>
+        <p>This bronze sculpture depicts Shiva as the cosmic dancer. His movement symbolizes the continuous cycle of creation, preservation, and destruction. Surrounded by a ring of fire, he represents the eternal energy and rhythm of the universe.</p>
+    </div>
+</div>
+
+        <div class="slide">
+    <img src="/Sculpture-website/image/demo-3.jpg" alt="Stone Hanuman Sculpture">
+    <div class="info-overlay">
+        <h3>Bajrangbali</h3>
+        <p>A powerful stone sculpture of Lord Hanuman, the symbol of selfless service and strength. His resolute expression and iconic mace represent unwavering protection, courageous heart, and total devotion to the divine path.</p>
+    </div>
+</div>
+
+       <div class="slide">
+    <img src="/Sculpture-website/image/balaji.jpg" alt="Tirupati Balaji Sculpture">
+    <div class="info-overlay">
+        <h3>Tirupati Balaji</h3>
+        <p>A majestic relief of Lord Venkateswara, featuring the iconic Shanka (conch) and Chakra (wheel). This sculpture symbolizes divine protection, the preservation of cosmic order, and the granting of boons to all who seek his grace.</p>
+    </div>
+</div> 
+
+       <div class="slide">
+    <img src="/Sculpture-website/image/boy-girl.jpg" alt="Clay Couple Sculpture">
+    <div class="info-overlay">
+        <h3>Shared Moments</h3>
+        <p>A raw terracotta-style sculpture capturing a quiet, everyday conversation between a couple and their loyal dog. It represents the beauty of companionship, human connection, and the simple, grounding joys of life.</p>
+    </div>
+</div>
+
+        <div class="slide">
+    <img src="/Sculpture-website/image/girl.jpg" alt="Meditating Girl Sculpture">
+    <div class="info-overlay">
+        <h3>Inner Silence</h3>
+        <p>A minimalist terracotta sculpture capturing a moment of deep introspection. This piece symbolizes the search for inner peace, stillness of the mind, and the raw, earthy beauty of handcrafted clay artistry.</p>
+    </div>
+</div>
+
+     <div class="slide">
+    <img src="/Sculpture-website/image/lion.jpg" alt="Lion Guardian Sculpture">
+    <div class="info-overlay">
+        <h3>Lion Guardians</h3>
+        <p>This pair of wooden lions symbolizes protection, courage, and nobility. Traditionally used as gatekeepers, these sculptures represent vigilance and the strength required to maintain peace while warding off negative energies from a sacred space.</p>
+    </div>
+</div>
+
+         <div class="slide">
+    <img src="/Sculpture-website/image/girl.jpg" alt="Meditating Girl Sculpture">
+    <div class="info-overlay">
+        <h3>Inner Silence</h3>
+        <p>A minimalist terracotta sculpture capturing a moment of deep introspection. This piece symbolizes the search for inner peace, stillness of the mind, and the raw, earthy beauty of handcrafted clay artistry.</p>
+    </div>
+</div>  
+            
+    
+            
     </div>
     </div>
 </section>
@@ -129,17 +282,134 @@
     <h2 class="section-title">Our Creative Portfolio</h2>
     <div class="slider">
         <div class="slide-track">
-            <div class="slide"><img src="/Sculpture-website/image/ganpati.jpg" alt="Work 1"></div>
-            <div class="slide"><img src="/Sculpture-website/image/ele.jpg" alt="Work 2"></div>
-            <div class="slide"><img src="/Sculpture-website/image/face.jpg" alt="Work 3"></div>
-            <div class="slide"><img src="/Sculpture-website/image/Lord_Shiva.jpg" alt="Work 4"></div>
-            <div class="slide"><img src="/Sculpture-website/image/basvana.jpg" alt="Work 5"></div>
-            <div class="slide"><img src="/Sculpture-website/image/devi.jpg" alt="Work 6"></div>
-            <div class="slide"><img src="/Sculpture-website/image/hanuman.jpg" alt="Work 7"></div>
             
-            <div class="slide"><img src="/Sculpture-website/image/ele2.jpg" alt="Work 1"></div>
+            <div class="slide">
+    <img src="/Sculpture-website/image/ganpati.jpg" alt="Lion Guardian Sculpture">
+    <div class="info-overlay">
+        <h3>The Guardian Lion</h3>
+        <p>This pair of wooden lions symbolizes protection, courage, and strength. Traditionally placed at entrances, these guardians represent vigilance and the noble power required to ward off negative energies while maintaining peace.</p>
+    </div>
+</div>
+           <div class="slide">
+    <img src="/Sculpture-website/image/ele.jpg" alt="Mother and Child Sculpture">
+    <div class="info-overlay">
+        <h3>Nurturing Love</h3>
+        <p>A heartwarming clay sculpture depicting a mother bathing her child. This piece captures a raw, tender moment of daily life, symbolizing the universal theme of maternal care, protection, and the simple beauty of human connection.</p>
+    </div>
+</div>
+<div class="slide">
+    <img src="/Sculpture-website/image/face.jpg" alt="Goddess Sculpture">
+    <div class="info-overlay">
+        <h3>Divine Grace</h3>
+        <p>This weathered sculpture features a Goddess with a striking turquoise patina and gold detailing. It represents the timeless nature of divinity, inner peace, and the beauty found in ancient heritage and spiritual devotion.</p>
+    </div>
+</div>
+
+           <div class="slide">
+    <img src="/Sculpture-website/image/Lord_Shiva.jpg" alt="Mahadev Sculpture">
+    <div class="info-overlay">
+        <h3>Mahadev</h3>
+        <p>This sculpture depicts the supreme yogi in deep meditation. Representing cosmic balance, his form includes the Trishula for time and the Damru for creation. He is the destroyer of evil and the source of ultimate spiritual power.</p>
+    </div>
+</div>
+
+           <div class="slide">
+    <img src="/Sculpture-website/image/basvana.jpg" alt="Basavanna Nandi Sculpture">
+    <div class="info-overlay">
+        <h3>Lord Basavanna</h3>
+        <p>A grand depiction of Nandi, the sacred bull and vahana of Lord Shiva. This sculpture symbolizes eternal patience, strength, and selfless devotion. It serves as a guardian of Dharma and the gateway to spiritual wisdom.</p>
+    </div>
+</div>
+
+            <div class="slide">
+    <img src="/Sculpture-website/image/devi.jpg" alt="Devi Bronze Sculpture">
+    <div class="info-overlay">
+        <h3>Divine Devi</h3>
+        <p>A stunning black bronze sculpture inspired by Theyyam artistry. This piece captures the fierce yet graceful essence of the Divine Mother, featuring an intricate crown and traditional motifs that symbolize protection, cultural heritage, and spiritual power.</p>
+    </div>
+</div>
+
+           <div class="slide">
+    <img src="/Sculpture-website/image/hanuman.jpg" alt="Lord Hanuman Sculpture">
+    <div class="info-overlay">
+        <h3>Lord Hanuman</h3>
+        <p>This serene relief depicts the deity of strength and devotion. Surrounded by sacred chants, his expression represents deep meditation, unwavering loyalty, and immense spiritual power.</p>
+    </div>
+</div>
             
+           <div class="slide">
+    <img src="/Sculpture-website/image/ele2.jpg" alt="Golden Elephant Sculpture">
+    <div class="info-overlay">
+        <h3>Royal Elephant</h3>
+        <p>This majestic golden elephant represents prosperity, wisdom, and good fortune. Its upraised trunk is a symbol of luck and energy, while the intricate carvings reflect a sense of royal power and divine protection in traditional Indian art.</p>
+    </div>
+</div>
+            
+        
+      <div class="slide">
+    <img src="/Sculpture-website/image/ganpati.jpg" alt="Lion Guardian Sculpture">
+    <div class="info-overlay">
+        <h3>The Guardian Lion</h3>
+        <p>This pair of wooden lions symbolizes protection, courage, and strength. Traditionally placed at entrances, these guardians represent vigilance and the noble power required to ward off negative energies while maintaining peace.</p>
+    </div>
+</div>
+           <div class="slide">
+    <img src="/Sculpture-website/image/ele.jpg" alt="Mother and Child Sculpture">
+    <div class="info-overlay">
+        <h3>Nurturing Love</h3>
+        <p>A heartwarming clay sculpture depicting a mother bathing her child. This piece captures a raw, tender moment of daily life, symbolizing the universal theme of maternal care, protection, and the simple beauty of human connection.</p>
+    </div>
+</div>
+<div class="slide">
+    <img src="/Sculpture-website/image/face.jpg" alt="Goddess Sculpture">
+    <div class="info-overlay">
+        <h3>Divine Grace</h3>
+        <p>This weathered sculpture features a Goddess with a striking turquoise patina and gold detailing. It represents the timeless nature of divinity, inner peace, and the beauty found in ancient heritage and spiritual devotion.</p>
+    </div>
+</div>
+
+           <div class="slide">
+    <img src="/Sculpture-website/image/Lord_Shiva.jpg" alt="Mahadev Sculpture">
+    <div class="info-overlay">
+        <h3>Mahadev</h3>
+        <p>This sculpture depicts the supreme yogi in deep meditation. Representing cosmic balance, his form includes the Trishula for time and the Damru for creation. He is the destroyer of evil and the source of ultimate spiritual power.</p>
+    </div>
+</div>
+
+           <div class="slide">
+    <img src="/Sculpture-website/image/basvana.jpg" alt="Basavanna Nandi Sculpture">
+    <div class="info-overlay">
+        <h3>Lord Basavanna</h3>
+        <p>A grand depiction of Nandi, the sacred bull and vahana of Lord Shiva. This sculpture symbolizes eternal patience, strength, and selfless devotion. It serves as a guardian of Dharma and the gateway to spiritual wisdom.</p>
+    </div>
+</div>
+
+            <div class="slide">
+    <img src="/Sculpture-website/image/devi.jpg" alt="Devi Bronze Sculpture">
+    <div class="info-overlay">
+        <h3>Divine Devi</h3>
+        <p>A stunning black bronze sculpture inspired by Theyyam artistry. This piece captures the fierce yet graceful essence of the Divine Mother, featuring an intricate crown and traditional motifs that symbolize protection, cultural heritage, and spiritual power.</p>
+    </div>
+</div>
+
+           <div class="slide">
+    <img src="/Sculpture-website/image/hanuman.jpg" alt="Lord Hanuman Sculpture">
+    <div class="info-overlay">
+        <h3>Lord Hanuman</h3>
+        <p>This serene relief depicts the deity of strength and devotion. Surrounded by sacred chants, his expression represents deep meditation, unwavering loyalty, and immense spiritual power.</p>
+    </div>
+</div>
+            
+           <div class="slide">
+    <img src="/Sculpture-website/image/ele2.jpg" alt="Golden Elephant Sculpture">
+    <div class="info-overlay">
+        <h3>Royal Elephant</h3>
+        <p>This majestic golden elephant represents prosperity, wisdom, and good fortune. Its upraised trunk is a symbol of luck and energy, while the intricate carvings reflect a sense of royal power and divine protection in traditional Indian art.</p>
+    </div>
+</div>
         </div>
+
+        
     </div>
 </section>
 
@@ -150,6 +420,76 @@
     <p>Powerful admin panel with clean UI</p>
    
 </section>
+
+
+
+<!-- Services -->
+
+
+    <section class="main-wrapper">
+        <h1 class="reveal">Our Sculpture Services</h1>
+        
+        <div class="services-container">
+            
+            <div class="service-card reveal">
+                <div class="icon">🗿</div>
+                <h2>Custom Statues</h2>
+                <p>We create bespoke statues based on your specific requirements. Send us your design, and we bring it to life in stone or metal.</p>
+            </div>
+
+            <div class="service-card reveal">
+                <div class="icon">🎨</div>
+                <h2>Artistic Sculptures</h2>
+                <p>Browse our exclusive gallery of pre-made sculptures, perfect for luxury home decor and corporate offices.</p>
+            </div>
+
+            <div class="service-card reveal">
+                <div class="icon">🛠️</div>
+                <h2>Restoration</h2>
+                <p>Professional restoration services for aged or damaged sculptures to return them to their original glory.</p>
+            </div>
+
+            <div class="service-card reveal">
+                <div class="icon">🌍</div>
+                <h2>Global Shipping</h2>
+                <p>Every piece is packed in custom wooden crates and shipped worldwide with full insurance coverage.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- oner info -->
+ <div class="founder-wrapper">
+        <div class="founder-card reveal-on-scroll">
+            <div class="founder-visual">
+                <img src="/Sculpture-website/image/oner.png" alt="Srikanth - Founder">
+                <div class="image-accent"></div>
+            </div>
+            
+            <div class="founder-content">
+                <h4 class="company-name">Sculpture Co.</h4>
+                <h2 class="founder-name">Nikhil</h2>
+                <div class="experience-badge">Master Curator</div>
+                
+                <p class="founder-statement">
+                    Transforming spaces with timeless artistry. My mission is to bring the soul of traditional craftsmanship into the modern home, creating a bridge between heritage and contemporary elegance.
+                </p>
+
+                <div class="stats-row">
+                    <div class="stat">
+                        <span class="number">10+</span>
+                        <span class="label">Years Exp</span>
+                    </div>
+                    <div class="stat">
+                        <span class="number">500+</span>
+                        <span class="label">Sculptures</span>
+                    </div>
+                </div>
+
+                <a href="#footer" class="cta-button">Partner With Us</a>
+            </div>
+        </div>
+    </div>
 
 </main>
 <!-- Footer -->
@@ -180,8 +520,8 @@
         <div class="footer-box contact">
             <h3>Contact Us</h3>
             <p>📍 Market yard solapur</p>
-            <p>📧 shrikantbirajdar452@gmail.com</p>
-            <p>📞 +1 (555) 885-7427</p>
+            <p>📧 nikhilkatkar300@gmail.com</p>
+            <p>📞 +91 8668267300</p>
         </div>
 
         <div class="footer-box social">
