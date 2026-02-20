@@ -145,3 +145,16 @@ function addToWishlist(id, category) {
   localStorage.setItem("wishlistItems", JSON.stringify(wishlistItems));
   alert("Item added to wishlist!");
 }
+
+const titles = document.querySelectorAll(".footer-title");
+
+titles.forEach((title) => {
+  title.addEventListener("click", () => {
+    const parent = title.parentElement;
+    parent.classList.toggle("active");
+  });
+});
+
+function toggleFilter() {
+  document.getElementById("sidebar-section").classList.toggle("active");
+}
