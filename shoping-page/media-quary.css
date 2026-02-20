@@ -66,7 +66,7 @@ i{
 
 #category-box{
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 10px;
 }
 
 .product-title , .explore-tital{
@@ -74,13 +74,21 @@ i{
     margin: 10px;
 }
 
-.category-box img{
-    width: 70px;
-    height: 70px;
+.category-box-img a img{
+    height: 60px;
+    width: 60px;
+}
+
+.category-box-img .title{
+    font-size: 0.5rem;
+}
+
+.product-category-images{
+    margin: 0 1%;
 }
 
 .pt-3 a{
-    font-size: 0.5rem;
+    font-size: 0.3rem;
 }
 
 .button{
@@ -111,12 +119,21 @@ i{
 
 .explore-box .pt-3 a{
     font-weight: 300;
-    font-size: 0.8rem;
+    font-size: 0.5rem;
     line-height: 0px;
 }
 
 .home-categories-list .categories-container{
     padding: 0 10px;
+}
+
+.home-categories-list .explore-box{
+    display: flex;
+    margin: 0px 5%;
+}
+
+.explore-content .title {
+    line-height: 0.125;
 }
 
 /* Footer section */
@@ -125,6 +142,12 @@ i{
     padding: 1rem 0;
     height: auto;
     width: 100%;
+}
+
+.footer-bottom{
+    border-top:1px solid #333;
+    text-align:center;
+    font-size:14px;
 }
 
 .column div{
@@ -137,20 +160,20 @@ ul li{
 }
 }
 
-@media (max-width: 300px) {
+@media (max-width: 768px)  {
     header{
-    height: 60px;
+    height: 70px;
     justify-content: space-between;
-    padding: 0 0.5rem;
+    padding: 0 3rem;
 }
 
 .logo-container{
-    height: 50px;
-    width: 50px;
+    height: 80px;
+    width: 80px;
 }
 
 .search-bar {
-    width: 100px;
+    max-width: 250px;
 }
 
 .category {
@@ -161,11 +184,15 @@ ul li{
     flex: 1;
     padding: 15px 12px;
     font-size: 10px;
-    height: 2px;
+    height: 35px;
 }
 
 i{
-    font-size: 15px;
+    font-size: 17px;
+}
+
+.add-to-cart-menu i{
+    font-size: 22px;
 }
 
 .add-to-cart-menu span{
@@ -173,7 +200,9 @@ i{
 }
 
 .add-to-cart-menu{
-    gap: 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
 }
 
 /* Hero Section */
@@ -186,7 +215,7 @@ i{
 
 .hero{
     width:100%;
-    height:200px;
+    height:300px;
 }
 
 .left-side-image{
@@ -197,9 +226,14 @@ i{
 
 .categories-container{
     display: flex;
-    flex-wrap: wrap;
     padding: 0 10px;
     align-items: center;
+    flex-wrap: wrap;
+}
+
+#category-box{
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .product-title , .explore-tital{
@@ -207,13 +241,21 @@ i{
     margin: 10px;
 }
 
-.category-box img{
-    width: 65px;
-    height: 65px;
+.category-box-img a img{
+    height: 90px;
+    width: 90px;
+}
+
+.category-box-img .title{
+    font-size: 0.5rem;
+}
+
+.product-category-images{
+    margin: 0 7%;
 }
 
 .pt-3 a{
-    font-size: 0.5rem;
+    font-size: 0.3rem;
 }
 
 .button{
@@ -227,14 +269,20 @@ i{
     width: 100%;
     height: 5px;
 }
+
 .explore-content{
     width: 100%;
-    height: 100px;
+    height: 100%;
     background-color: #f9e9da;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+}
+
+.explore-image img{
+    width: 100%;
+    height: 5px;
 }
 
 .explore-box img{
@@ -244,49 +292,155 @@ i{
 
 .explore-box .pt-3 a{
     font-weight: 300;
-    font-size: 0.8rem;
+    font-size: 0.5rem;
     line-height: 0px;
+}
+
+.home-categories-list{
+    height: 90%;
 }
 
 .home-categories-list .categories-container{
     padding: 0 10px;
 }
 
+.home-categories-list .explore-box{
+    display: flex;
+    margin: 0px 5%;
+}
+
+.explore-content .title {
+    line-height: 0.125;
+}
+
 /* Footer section */
+    .footer-section{
+        margin-top: 5%;
+    }  
 
-.footer {
-    padding: 1rem 0;
-    height: auto;
-    width: 100%;
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-box {
+        width: 100%;
+        border-bottom: 1px solid #ccc;
+        padding: 10px 0;
+    }
+
+    .footer-title {
+        cursor: pointer;
+        position: relative;
+        font-size: 1.2rem;
+    }
+
+    .footer-title::after {
+        content: "+";
+        position: absolute;
+        right: 10px;
+        font-size: 25px;
+    }
+
+    .footer-box p,
+    .footer-box ul,
+    .social-icons {
+        display: none;
+        margin-top: 10px;
+    }
+
+    .footer-box.active p,
+    .footer-box.active ul,
+    .footer-box.active .social-icons {
+        display: block;
+    }
+
+    .footer-box.active .footer-title::after {
+        content: "-";
+    }
+
+    /* Satues Page CSS */
+
+    .page-banner-image{
+        height: 200px;
+    }
+
+    .header-image-text{
+        position: relative;
+        transform: translate(0%, -50%);
+        text-align: center;
+        width: 100%;
+        text-shadow: #000 2px 2px 4px;
+    }
+
+    .header-image-text nav a{
+        text-decoration: none;
+        color: white;
+    }
+
+    .header-image-text h1{
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+        color: white;
+    }
+
+    .filter-toggle {
+        display: block;
+    }
+
+    .sidebar-section {
+        position: fixed;
+        top: 40%;
+        left: -260px;   /* Hidden */
+        width: 250px;
+        height: 100%;
+        background: #fff;
+        transition: 0.3s ease;
+        z-index: 1000;
+        box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+    }
+
+    .sidebar-section.active {
+        left: 0;   /* Show sidebar */
+    }
+
+    .sidebar-toggle-btn {
+        display: block;
+        margin: 10px;
+        padding: 8px 15px;
+        border: none;
+        background: #333;
+        color: white;
+        border-radius: 5px;
+    }
+
+    .image-container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .image-container .box1{
+        height: auto;
+        width: 300px;
+    }
+
+    .product-small-tag{
+        background-color: #23b823;
+        border-radius: 10px;
+        width: 50%;
+        text-align: center;
+        font-size: 1rem;
+        height: auto;
+    }
+
+    /*Add To Cart Page CSS */
+
+    .add-to-cart-serction{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .cart-summary-section{
+        width: 100%;
+    }
 }
-
-.column div{
-    font-size: 0.8rem;
-    font-weight: 500;
-}
-
-ul li{
-    font-size: 0.6rem;
-}
-
-/* Statues Page CSS */
-
-.page-banner-image{
-    width: 100%;
-    max-height: 00px;
-}
-
-.header-image-text{
-    width: 100%;
-    text-shadow: #000 2px 2px 4px;
-}
-
-.header-image-text h1{
-    font-size: 1rem;
-}
-
-}
-
-
-
-

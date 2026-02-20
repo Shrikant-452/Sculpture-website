@@ -81,114 +81,79 @@
             </div>
         </div>
     </section>
-
+    <button class="filter-toggle" onclick="toggleFilter()">☰ Filters</button>
     <section class="content-container">
-        <div class="d-flex flex-column flex-shrink-0 p-3 bg-body-tertiary sidebar-section"> 
+        <div class="d-flex flex-column flex-shrink-0 p-1 bg-body-tertiary sidebar-section" id="sidebar-section"> 
             <h5 class="is-size-2">Filter Products</h5>
             <hr> 
             <ul class="nav nav-pills flex-column mb-auto" id="category-section"></ul> 
+            <hr>
+            <h5 class="is-size-2">Filter Products</h5>
+            <!-- Price Filter -->
+            <div class="filter-group">
+                <h6>Price</h6>
+                <label><input type="checkbox"> ₹0 - ₹5,000</label>
+                <label><input type="checkbox"> ₹5,000 - ₹15,000</label>
+                <label><input type="checkbox"> ₹15,000+</label>
+            </div>
+            <!-- Button -->
+            <button class="apply-btn">Apply Filters</button>
         </div>
-        <div class="image-container reveal" id="image-container"></div>
+        <div class="image-container reveal" id="image-container">
+
+        </div>
     </section>
 
     <div class="footer-section">
         <div class="wave-border"></div>
         <footer class="footer">
-            <div class="footer-information">
-                <div class="columns">
-                    <div class="column">
-                        <div class="title is-size-6 is-size-5-fullhd is-flex is-justify-content-space-between footer-column-title" rel="products">
-                            <div>Products</div>
-                            <i class="fa-light fa-angle-down is-hidden-desktop"></i>
-                        </div>
-                        <div class="is-hidden-touch footer-column-content" rel="products">
-                            <ul class="is-family-secondary is-size-6 is-size-7-desktop is-size-6-fullhd">
-                                <li>
-                                    <a href="/sculptures/" class="has-text-white" title="Statues">Statues</a>
-                                </li>			
-                                <li>
-                                    <a href="/book/" class="has-text-white" title="Books">Books</a>
-                                </li>		
-                                <li>
-                                    <a href="/jewelry/" class="has-text-white" title="Jewelry">Jewelry</a>
-                                </li>		
-                                <li>
-                                    <a href="/textiles/" class="has-text-white" title="Clothing &amp; More">Clothing &amp; More</a>
-                                </li>					
-                                <li>
-                                    <a href="/paintings/" class="has-text-white" title="Paintings">Paintings</a>
-                                </li>						
-                                <li>
-                                    <a href="/paintings/" class="has-text-white" title="Paintings">Paintings</a>
-                                </li>			
-                                <li>
-                                    <a href="/homeandliving/" class="has-text-white" title="Home &amp; Living">Home &amp; Living</a>
-                                </li>       
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="title is-size-6 is-size-5-fullhd is-flex is-justify-content-space-between footer-column-title" rel="information">
-                            <div>Information</div>
-                            <i class="fa-light fa-angle-down is-hidden-desktop"></i>
-                        </div>
-                        <div class="is-hidden-touch footer-column-content" rel="information">
-                            <ul class="is-family-secondary is-size-6 is-size-7-desktop is-size-6-fullhd">
-                                <li><a href="/disclaimer/" class="has-text-white" title="Disclaimer">Disclaimer</a></li>	
-                                <li><a href="/returns/" class="has-text-white" title="Return Policy">Return Policy</a></li>		
-                                <li><a href="/privacy/" class="has-text-white" title="Privacy Policy">Privacy Policy</a></li>		
-                                <li><a href="/shipping/" class="has-text-white" title="Shipping Policy">Shipping Policy</a></li>	
-                                <li><a href="/terms/" class="has-text-white" title="Terms of Use">Terms of Use</a></li>                  
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="title is-size-6 is-size-5-fullhd is-flex is-justify-content-space-between footer-column-title" rel="discover">
-                            <div>Discover</div>
-                            <i class="fa-light fa-angle-down is-hidden-desktop"></i>
-                        </div>
-                        <div class="is-hidden-touch footer-column-content" rel="discover">
-                            <ul class="is-family-secondary is-size-6 is-size-7-desktop is-size-6-fullhd">
-                                <li><a href="/aboutus/" class="has-text-white" title="About Us">About Us</a></li>		
-                                <li><a href="/faq/" class="has-text-white" title="FAQs">FAQs</a></li>
-                                <li><a href="/article/" class="has-text-white" title="Newsletter Archive">Newsletter Archive</a></li>					
-                                <li><a href="/blog/" class="has-text-white" title="Blogs">Blogs</a></li>					
-                                <li><a href="/documentary/" class="has-text-white" title="Documentaries">Documentaries</a></li>					
-                                <li><a href="/testimonials/" class="has-text-white" title="Testimonials">Testimonials</a></li>					
-                                <li><a href="/customerstories/" class="has-text-white" title="Customer Stories">Customer Stories</a></li>					
-                                <li><a href="/editorspicks/" class="has-text-white" title="Editor's Picks">Editor's Picks</a></li>                  
-                                <li class="has-text-white">Archives
-                                    <ul class="has-text-white is-family-primary ul-text">
-                                        <li><a href="/archives/sculptures/" class="has-text-white" title="Archives - Statues">Statues</a></li>					
-                                        <li><a href="/archives/book/" class="has-text-white" title="Archives - Books">Books</a></li>					
-                                        <li><a href="/archives/jewelry/" class="has-text-white" title="Archives - Jewelry">Jewelry</a></li>	
-                                        <li><a href="/archives/textiles/" class="has-text-white" title="Archives - Clothing &amp; More">Clothing &amp; More</a></li>					
-                                        <li><a href="/archives/paintings/" class="has-text-white" title="Archives - Paintings">Paintings</a></li>					
-                                        <li><a href="/archives/homeandliving/" class="has-text-white" title="Archives - Home &amp; Living">Home &amp; Living</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="title is-size-6 is-size-5-fullhd is-flex is-justify-content-space-between footer-column-title" rel="tools">
-                            <div>Tools</div>
-                            <i class="fa-light fa-angle-down is-hidden-desktop"></i>
-                        </div>
-                        <div class="is-hidden-touch footer-column-content" rel="tools">
-                            <ul class="is-family-secondary is-size-6 is-size-7-desktop is-size-6-fullhd">
-                                <li><a href="/contact-us/" class="has-text-white" title="Contact Us">Contact Us</a></li>					
-                                <li><a href="/customization/" class="has-text-white" title="Customize">Customize</a></li>					
-                                <li><a href="/sell-with-us/" class="has-text-white" title="Sell with Us">Sell with Us</a></li>					
-                                <li><a href="/resellers/" class="has-text-white" title="Wholesale">Wholesale</a></li>					
-                                <li><a href="/affiliate-program/" class="has-text-white" title="Affiliates Program">Affiliates Program</a></li>					
-                                <li><a href="/my-orders/" class="has-text-white" title="Track Your Order">Track Your Order</a></li>					
-                                <li><a href="/gift-voucher/" class="has-text-white" title="Gift Vouchers">Gift Vouchers</a></li>					
-                                <li><a href="/sitemap/" class="has-text-white" title="Sitemap">Sitemap</a></li>                            
-                            </ul>
-                        </div>
+            <div class="footer-container">
+                <!-- About Section -->
+                <div class="footer-box">
+                    <h3 class="footer-title">About Us</h3>
+                    <p>
+                        We create handcrafted sculptures in marble, wood, and metal.
+                        Each piece reflects artistic precision and timeless beauty.
+                    </p>
+                </div>
+                <!-- Quick Links -->
+                <div class="footer-box">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul>
+                        <li><a href="./shopping_page.html">Home</a></li>
+                        <li><a href="./statues.html">Shop</a></li>
+                        <li><a href="#">Custom Orders</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- Support -->
+                <div class="footer-box">
+                    <h3 class="footer-title">Customer Support</h3>
+                    <ul>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Return Policy</a></li>
+                        <li><a href="#">Payment Methods</a></li>
+                    </ul>
+                </div>
+                <!-- Contact -->
+                <div class="footer-box">
+                    <h3 class="footer-title">Contact Info</h3>
+                    <p>Email: info@sculpturestore.com</p>
+                    <p>Phone: +91 9876543210</p>
+                    <p>Address: Bengaluru, India</p>
+
+                    <div class="social-icons">
+                        <a href="#">🌐</a>
+                        <a href="#">📷</a>
+                        <a href="#">📘</a>
+                        <a href="#">▶</a>
                     </div>
                 </div>
+            </div>
+            <div class="footer-bottom">
+                © 2026 Sculpture Store. All Rights Reserved.
             </div>
         </footer>
     </div>
