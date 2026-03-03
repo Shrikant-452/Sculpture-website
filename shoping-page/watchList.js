@@ -16,7 +16,7 @@ function displayWatchListItem() {
   }
 
   watchlistItems.forEach((item) => {
-    container.innerHTML += `<div class="cart-card">
+    container.innerHTML += `<div class="cart-card" id="cart-item">
                 <!-- IMAGE -->
                 <div class="cart-img">
                     <img src="${item.img}" alt="Product">

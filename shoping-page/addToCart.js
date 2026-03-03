@@ -3,6 +3,10 @@ window.onload = function () {
   cartSummary();
 };
 
+document.getElementById("save-later-btn").addEventListener("click", () => {
+  window.location.href = "./orderInfoPage.html";
+});
+
 function showCartItems() {
   let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
   let cartContainer = document.getElementById("cart-container");
@@ -64,7 +68,7 @@ function showCartItems() {
 
                 <!-- ACTIONS -->
                 <div class="action-buttons">
-                    <button type="button" class="save-later-btn">Save for later</button>
+                    <button type="button" class="save-later-btn" onclick="buyNow('${item.id}','${item.category}')">Buy Now</button>
                     <button type="button" class="remove-btn" onclick="removeItem('${item.id}','${item.category}')">Remove</button>
                 </div>
                 </div>
@@ -125,4 +129,18 @@ function addShipping(checkbox) {
     currentTotal -= shippingCost;
   }
   totalElement.innerText = `Rs.${currentTotal.toLocaleString()}`;
+}
+
+function buyNow(id, category) {
+  let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+  let selectedProduct = cartItems.find(
+    (item) => item.id === Number(id) && item.category === category,
+  );
+
+  if (!selectedProduct) return;
+
+  localStorage.setItem("selectedItems", JSON.stringify([selectedProduct]));
+
+  window.location.href = "./orderInfoPage.html";
 }

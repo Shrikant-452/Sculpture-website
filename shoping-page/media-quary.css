@@ -1,165 +1,3 @@
-/* Mobile */
-@media (max-width: 480px)  {
-    header{
-    height: 60px;
-    justify-content: space-between;
-    padding: 0 0.5rem;
-}
-
-.logo-container{
-    height: 50px;
-    width: 50px;
-}
-
-.search-bar {
-    max-width: 220px;
-}
-
-.category {
-    display: none;
-}
-
-.search-bar input {
-    flex: 1;
-    padding: 15px 12px;
-    font-size: 10px;
-    height: 2px;
-}
-
-i{
-    font-size: 15px;
-}
-
-.add-to-cart-menu span{
-    display: none;
-}
-
-.add-to-cart-menu{
-    gap: 10px;
-}
-
-/* Hero Section */
-
-.carousel-image{
-    padding: 0 0.5rem;
-    display: flex;
-    flex-direction: column;
-}
-
-.hero{
-    width:100%;
-    height:200px;
-}
-
-.left-side-image{
-    display: none;
-}
-
-/* Catogory Section */
-
-.categories-container{
-    display: flex;
-    padding: 0 10px;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-#category-box{
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.product-title , .explore-tital{
-    font-size: 1.5rem;
-    margin: 10px;
-}
-
-.category-box-img a img{
-    height: 60px;
-    width: 60px;
-}
-
-.category-box-img .title{
-    font-size: 0.5rem;
-}
-
-.product-category-images{
-    margin: 0 1%;
-}
-
-.pt-3 a{
-    font-size: 0.3rem;
-}
-
-.button{
-    width: 20%;
-    margin-top: -100px;
-}
-
-/* Explore Section */
-
-.explore-image img{
-    width: 100%;
-    height: 5px;
-}
-.explore-content{
-    width: 100%;
-    height: 100px;
-    background-color: #f9e9da;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-}
-
-.explore-box img{
-    width: 65px;
-    height: 65px;
-}
-
-.explore-box .pt-3 a{
-    font-weight: 300;
-    font-size: 0.5rem;
-    line-height: 0px;
-}
-
-.home-categories-list .categories-container{
-    padding: 0 10px;
-}
-
-.home-categories-list .explore-box{
-    display: flex;
-    margin: 0px 5%;
-}
-
-.explore-content .title {
-    line-height: 0.125;
-}
-
-/* Footer section */
-
-.footer {
-    padding: 1rem 0;
-    height: auto;
-    width: 100%;
-}
-
-.footer-bottom{
-    border-top:1px solid #333;
-    text-align:center;
-    font-size:14px;
-}
-
-.column div{
-    font-size: 0.8rem;
-    font-weight: 500;
-}
-
-ul li{
-    font-size: 0.6rem;
-}
-}
-
 @media (max-width: 768px)  {
     header{
     height: 70px;
@@ -215,7 +53,7 @@ i{
 
 .hero{
     width:100%;
-    height:300px;
+    height:350px;
 }
 
 .left-side-image{
@@ -237,13 +75,13 @@ i{
 }
 
 .product-title , .explore-tital{
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     margin: 10px;
 }
 
 .category-box-img a img{
-    height: 90px;
-    width: 90px;
+    height: 150px;
+    width: 150px;
 }
 
 .category-box-img .title{
@@ -261,6 +99,7 @@ i{
 .button{
     width: 20%;
     margin-top: -100px;
+    height: 100%;
 }
 
 /* Explore Section */
@@ -286,13 +125,13 @@ i{
 }
 
 .explore-box img{
-    width: 65px;
-    height: 65px;
+    width: 150px;
+    height: 150px;
 }
 
 .explore-box .pt-3 a{
     font-weight: 300;
-    font-size: 0.5rem;
+    font-size: 0.6rem;
     line-height: 0px;
 }
 
@@ -432,6 +271,30 @@ i{
         height: auto;
     }
 
+    .box1{
+        border-radius: 5%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+        margin: 20px;
+        padding: 10px 5px;
+        object-fit: cover;
+        margin: 3%;
+    }
+
+    .image-overlay{
+        position: absolute;
+        bottom: 20%;
+        right: 10px;
+        display: flex;
+        gap: 10px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        background-color: white;
+        color: black;
+        padding: 5px 5px;
+        border-radius: 5px;
+        font-size: 1rem;
+    }
+
     /*Add To Cart Page CSS */
 
     .add-to-cart-serction{
@@ -442,5 +305,415 @@ i{
 
     .cart-summary-section{
         width: 100%;
+    }
+
+    /*Order Page CSS */
+
+    .product-wrapper {
+        max-width: 1200px;
+        margin: 10px auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .preview img {
+        height: 500px;
+}
+}
+
+/* Mobile */
+@media (max-width: 480px)  {
+    header{
+    height: 60px;
+    justify-content: space-between;
+    padding: 0 0.5rem;
+}
+
+.logo-container{
+    height: 50px;
+    width: 50px;
+}
+
+.search-bar {
+    max-width: 220px;
+}
+
+.category {
+    display: none;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 15px 12px;
+    font-size: 10px;
+    height: 2px;
+}
+
+i{
+    font-size: 15px;
+}
+
+.add-to-cart-menu i{
+    font-size: 15px;
+}
+
+.add-to-cart-menu span{
+    display: none;
+}
+
+.add-to-cart-menu{
+    gap: 10px;
+}
+
+/* Hero Section */
+
+.carousel-image{
+    padding: 0 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero{
+    width:100%;
+    height:200px;
+}
+
+.left-side-image{
+    display: none;
+}
+
+/* Catogory Section */
+
+.categories-container{
+    display: flex;
+    padding: 0 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#category-box{
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.product-title , .explore-tital{
+    font-size: 1.5rem;
+    margin: 10px;
+}
+
+.category-box-img a img{
+    height: 60px;
+    width: 60px;
+}
+
+.category-box-img .title{
+    font-size: 0.5rem;
+}
+
+.product-category-images{
+    margin: 0 1%;
+}
+
+.pt-3 a{
+    font-size: 0.3rem;
+}
+
+.button{
+    width: 20%;
+    margin-top: -100px;
+}
+
+/* Explore Section */
+
+.explore-image img{
+    width: 100%;
+    height: 5px;
+}
+.explore-content{
+    width: 100%;
+    height: 100px;
+    background-color: #f9e9da;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.explore-box img{
+    width: 65px;
+    height: 65px;
+}
+
+.explore-box .pt-3 a{
+    font-weight: 300;
+    font-size: 0.5rem;
+    line-height: 0px;
+}
+
+.home-categories-list .categories-container{
+    padding: 0 10px;
+}
+
+.home-categories-list .explore-box{
+    display: flex;
+    margin: 0px 5%;
+}
+
+.explore-content .title {
+    line-height: 0.125;
+}
+
+/* Footer section */
+
+.footer {
+    padding: 1rem 0;
+    height: auto;
+    width: 100%;
+    padding: 0 10px;
+}
+
+.footer-bottom{
+    border-top:1px solid #333;
+    text-align:center;
+    font-size:14px;
+}
+
+.footer-title{
+    font-size: 1.2rem;
+}
+
+.column div{
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+ul li{
+    font-size: 0.6rem;
+}
+
+/* Satues Page CSS */
+
+    .page-banner-image{
+        height: 120px;
+    }
+
+    .header-image-text{
+        position: relative;
+        transform: translate(0%, -60%);
+        text-align: center;
+        width: 100%;
+        text-shadow: #000 2px 2px 4px;
+    }
+
+    .header-image-text nav a{
+        text-decoration: none;
+        color: white;
+    }
+
+    .header-image-text h1{
+        margin-bottom: 1rem;
+        font-size: 1rem;
+        color: white;
+    }
+
+    .filter-toggle {
+        display: block;
+    }
+
+    .sidebar-section {
+        position: fixed;
+        top: 40%;
+        left: -260px;   /* Hidden */
+        width: 250px;
+        height: 100%;
+        background: #fff;
+        transition: 0.3s ease;
+        z-index: 1000;
+        box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+    }
+
+    .sidebar-section.active {
+        left: 0;   /* Show sidebar */
+    }
+
+    .sidebar-toggle-btn {
+        display: block;
+        margin: 10px;
+        padding: 8px 15px;
+        border: none;
+        background: #333;
+        color: white;
+        border-radius: 5px;
+    }
+
+    .content-container{
+        display: flex;
+        gap: 20px;
+        padding: 20px;
+        flex-direction: row;
+    }
+
+    .image-container .price{
+        display: block;
+    }
+
+    .image-container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .image-container .box1{
+        height: auto;
+        width: 100%;
+    }
+
+    .price-section{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 20px;
+    }
+
+    .product-small-tag{
+        background-color: #23b823;
+        border-radius: 10px;
+        width: 50%;
+        text-align: center;
+        font-size: 1rem;
+        height: auto;
+    }
+
+    .image-overlay{
+        position: absolute;
+        bottom: 20%;
+        display: flex;
+        gap: 10px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        background-color: white;
+        color: black;
+        border-radius: 5px;
+        font-size: 1rem;
+    }
+
+    .box1 img {
+        height: 200px;     /* reduce image height */
+        width: 100%;      /* maintain full width */
+        object-fit: contain;
+    }
+
+    /* Oreder Page CSS */
+    .gallery {
+        display: grid;
+        grid-template-columns: 40px 1fr;
+        gap: 20px;
+    }
+
+    .preview img {
+        width: 100%;
+        height: 400px;
+        border-radius: 22px;
+        background: #fff;
+        padding: 10px;
+        box-shadow:
+            0 30px 60px rgba(0, 0, 0, 0.15),
+            inset 0 0 0 1px rgba(255,255,255,0.4);
+    }
+
+    .product-info h1{
+        font-size: 20px;
+    }
+
+    .price-box {
+        display: flex;
+    }
+
+    .price-box .price{
+        font-size: 1.5rem;
+    }
+
+    /* Add To Cart Page CSS */
+
+    .add-to-cart-serction{
+        display: flex;
+        flex-direction: column;
+        margin: 3% 0;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    .cart-wrapper {
+        max-width: 800px;
+        margin: auto;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .cart-img img {
+        width: 120px;
+    }
+
+    .top-row{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .top-row h2 {
+        font-size: 12px;
+        line-height: normal;
+        height: auto;
+        width: 85%;
+        margin: 0;
+    }
+
+    .price{
+        display: none;
+    }
+
+    .tax-price{
+        font-size: 1rem;
+        color: #3dbb6d;
+        font-weight: 500;
+    }
+
+    .tax-price span {
+        font-size: 8px;
+    }
+
+    .qty-box {
+        padding: 5px 10px;
+    }
+
+    .shipping-box {
+        margin-left: -62%;
+        max-width: 360px;
+        padding: 5px;
+    }
+
+    .badge{
+        height: 30px;
+        width: 30px;
+    }
+
+    .action-buttons{
+        display: flex;
+        gap: 10px;
+        margin-left: -50%;
+    }
+
+    /* Watchlist Page CSS */
+    #cart-item{
+        width: 100%;
+    }
+
+    #watchlist-container .box1 img{
+        width: 100%;
+        height: 200px;
+        object-fit: contain;
     }
 }
