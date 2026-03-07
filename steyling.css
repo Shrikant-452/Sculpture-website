@@ -359,12 +359,7 @@ img {
     top: 60px;
     right: 0;
     background: var(--menu-bg);
-<<<<<<< HEAD
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-=======
     backdrop-filter: blur(2px);
->>>>>>> c32d088f4cb62774a195487fdc7f130a620fc71e
     padding: 20px;
     border-radius: 15px;
     display: flex;
@@ -1043,20 +1038,12 @@ h1 {
     border: 1px solid rgba(255, 255, 255, 0.1);
     padding: clamp(20px, 4vw, 40px);
     border-radius: 15px;
-<<<<<<< HEAD
-    flex: 1 1 300px; /* Flex-grow, Flex-shrink, Basis */
-    max-width: 400px;
-    transition: transform 0.3s ease;
-    -webkit-backdrop-filter: (10px);
-    backdrop-filter: blur(10px); /* Glass effect */
-=======
     flex: 1 1 min(100%, 300px);
     max-width: 100%;
     transition: transform 0.5s ease;
     backdrop-filter: blur(10px);
     animation-delay: 0.5s;
     
->>>>>>> c32d088f4cb62774a195487fdc7f130a620fc71e
 }
 
 
