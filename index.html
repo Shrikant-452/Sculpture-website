@@ -63,7 +63,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#footer">About</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#footer">Contact</a></li>
             </ul>
             
             <div >
@@ -75,17 +75,15 @@
     </button>
     
     <div class="menu-options" id="menuOptions">
-        <a href='https://cdn.jotfor.ms/agent/embedjs/019c75a85b737e9fab5ffc8072df2c4369ba/embed.js' class="menu-item" style="--i:1">
-            <span class="icon">🤖</span> AI Assistant
-        </a>
+
         <a href="./shoping-page/shopping_page.html" class="menu-item" style="--i:2" >
-            <span class="icon">🛒</span> Shop
+            <span class="icon">🛒</span> <span id="menu-text">Shop</span>
         </a>
         <a href="#footer" class="menu-item" style="--i:3">
-            <span class="icon">📁</span> Projects
+            <span class="icon">📁</span>  <span id="menu-text">Projects</span>
         </a>
-        <a href="#" class="menu-item" style="--i:4">
-            <span class="icon">💬</span> Support
+        <a href="#footer" class="menu-item" style="--i:4">
+            <span class="icon">💬</span> <span id="menu-text">Support</span>
         </a>
     </div>
 </div> 
@@ -122,19 +120,19 @@
 
 <!-- Features -->
 <section class="features">
-    <div class="feature">
+    <div class="feature" type="button" class="feature" onclick="window.location.href='#gallery-container_scroll-reveal'">
         <h3>🎨 Artistic Design</h3>
         <p>Handcrafted sculptures with modern aesthetics.</p>
     </div>
-    <button class="feature" onclick="window.location.href='dashboard/index.html'">
+    <div class="feature" type="button" class="feature" onclick="window.location.href='#dashboard'">
             <h3>📊 Admin Dashboard</h3>
         <p>Manage artworks, orders & analytics easily.</p>
-    </button>
-    <button class="feature" onclick="window.location.href='/Sculpture-website/shoping-page/index.html'">
+    </div>
+    <div class="feature" onclick="window.location.href='/Sculpture-website/shoping-page/shopping_page.html'">
         <h3>🚚 Global Delivery</h3>
         <p>Safe and secure worldwide shipping.</p>
-        </a>
-    </button>
+        
+    </div>
 
 </section>
 <!-- Demo images -->
@@ -427,7 +425,7 @@
 <!-- Services -->
 
 
-    <section class="main-wrapper">
+    <section class="main-wrapper" id="services">
         <h1 class="reveal">Our Sculpture Services</h1>
         
         <div class="services-container">
@@ -450,7 +448,7 @@
                 <p>Professional restoration services for aged or damaged sculptures to return them to their original glory.</p>
             </div>
 
-            <div class="service-card reveal">
+            <div class="service-card reveal" id="service-card-last">
                 <div class="icon">🌍</div>
                 <h2>Global Shipping</h2>
                 <p>Every piece is packed in custom wooden crates and shipped worldwide with full insurance coverage.</p>

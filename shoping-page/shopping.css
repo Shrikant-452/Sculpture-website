@@ -2,10 +2,25 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
+}
+:root {
+    --canva-purple: #4F7F84;
+    --canva-mint: #00c4cc;
+    --canva-white: #ffffff;
+    --menu-bg: rgba(113, 109, 108, 0.2);
+    --primary-bg: #DBD7D3;
+    --card-bg: #CB674C;
+    --accent-gold: #d4a373;
+    --text-main: #fefae0;
+    --text-dim: #bc6c25;
 }
 
 body {
     animation: fadeIn 1s ease-in-out;
+     background-color: #BEC6C3;
+     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+    
 }
 
 @keyframes fadeIn {
@@ -31,23 +46,34 @@ body{
 }
 
 header{
-    max-width: 100%;
-    height: 80px;
-    background-color: #ffffff;
+   height: 70px;
+    width: 100%;
+    max-width: 1500px;
+    position: fixed;
+    color: white;
+    background-color: #E9BC8B;
+    -webkit-backdrop-filter: blur(9px);
+    backdrop-filter: blur(9px);
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 30px;
     display: flex;
     align-items: center;
-    padding: 0 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    display: flex;
     justify-content: space-between;
-    padding: 0 6rem;
+    padding: 0 5%;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    z-index: 1000;
+    animation: slideDown 1s ease-out;
 }
-
-@media screen and (min-width: 1024px) {
-    header{
-        min-height: 3.25rem;
-        align-items: stretch;
-        display: flex;
+@keyframes slideDown {
+    from {
+        top: -100px;
+        opacity: 0;
+    }
+    to {
+        top: 15px;
+        opacity: 1;
     }
 }
 
@@ -170,11 +196,14 @@ i{
 .add-to-cart-menu div {
     cursor: pointer;
     transition: transform 0.3s ease, color 0.3s ease;
+    border-radius: 10px;
 }
 
 .add-to-cart-menu div:hover {
     transform: translateY(-4px) scale(1.05);
     color: #d63384;
+    background: linear-gradient(135deg, #F55247, #F2C27B);
+    transform: translateY(-2px);
 }
 
 .cart a, .wishlist a, .my-order a {
@@ -191,6 +220,7 @@ i{
     padding: 0 70px;
     justify-content: space-evenly;
     display: flex;
+    margin-top: 140px;
 }
 
 .left-side-image{
