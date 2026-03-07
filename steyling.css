@@ -475,6 +475,7 @@
     top: 60px;
     right: 0;
     background: var(--menu-bg);
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     padding: 20px;
     border-radius: 15px;
@@ -1107,6 +1108,7 @@ h1 {
     flex: 1 1 300px; /* Flex-grow, Flex-shrink, Basis */
     max-width: 400px;
     transition: transform 0.3s ease;
+    -webkit-backdrop-filter: (10px);
     backdrop-filter: blur(10px); /* Glass effect */
 }
 

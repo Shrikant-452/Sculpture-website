@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="shopping.css" />
+    <link rel="stylesheet" href="media-quary.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <title>Modern Sculpture Studio</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- LEFT SIDE -->
+
+      <div class="left">
+        <h1>Sculpture Store</h1>
+        <p>Login or create your account to explore premium sculptures.</p>
+      </div>
+
+      <!-- RIGHT SIDE -->
+
+      <div class="right">
+        <div class="switch">
+          <button id="signupBtn" type="button" class="active">Sign Up</button>
+          <button id="loginBtn" type="button">Login</button>
+        </div>
+
+        <!-- BOTH FORMS INSIDE ONE WRAPPER -->
+
+        <div class="form-wrapper" id="form-wrapper">
+          <!-- LOGIN FORM -->
+          <div class="form" id="loginForm">
+            <div class="input-group">
+              <input type="email" id="loginEmail" placeholder="Email" />
+            </div>
+
+            <div class="input-group">
+              <input
+                type="password"
+                id="loginPassword"
+                placeholder="Password"
+              />
+            </div>
+
+            <div class="input-group">
+              <select id="loginRole" title="role">
+                <option value="user">Login as User</option>
+                <option value="admin">Login as Admin</option>
+              </select>
+            </div>
+
+            <button class="submit" onclick="login()" type="button">
+              Login
+            </button>
+            <div id="loginMsg" class="message"></div>
+          </div>
+
+          <!-- SIGNUP FORM -->
+          <div class="form active" id="signupForm">
+            <div class="input-group">
+              <input type="text" id="signupName" placeholder="Full Name" />
+            </div>
+
+            <div class="input-group">
+              <input
+                type="tel"
+                id="phoneNumber"
+                placeholder="Phone No"
+                max="10"
+              />
+            </div>
+
+            <div class="input-group">
+              <input type="email" id="signupEmail" placeholder="Email" />
+            </div>
+
+            <div class="input-group">
+              <input
+                type="password"
+                id="signupPassword"
+                placeholder="Password"
+              />
+            </div>
+
+            <div class="input-group">
+              <select id="signupRole" title="role">
+                <option value="user">User Account</option>
+                <option value="admin">Admin Account</option>
+              </select>
+            </div>
+
+            <button class="submit" onclick="signup()">Create Account</button>
+            <div id="signupMsg" class="message"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="loginPage.js"></script>
+  </body>
+</html>

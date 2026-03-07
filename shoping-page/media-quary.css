@@ -80,8 +80,8 @@ i{
 }
 
 .category-box-img a img{
-    height: 150px;
-    width: 150px;
+    height: 130px;
+    width: 130px;
 }
 
 .category-box-img .title{
@@ -125,8 +125,8 @@ i{
 }
 
 .explore-box img{
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
 }
 
 .explore-box .pt-3 a{
@@ -219,7 +219,7 @@ i{
     .header-image-text h1{
         margin-bottom: 1rem;
         font-size: 1.2rem;
-        color: white;
+        color: orange;
     }
 
     .filter-toggle {
@@ -282,17 +282,21 @@ i{
 
     .image-overlay{
         position: absolute;
-        bottom: 20%;
-        right: 10px;
+        bottom: 22%;
+        right:5px;
         display: flex;
-        gap: 10px;
+        gap: 20px;
         opacity: 0;
         transition: opacity 0.3s ease;
         background-color: white;
         color: black;
-        padding: 5px 5px;
+        padding: 5px 20px;
         border-radius: 5px;
         font-size: 1rem;
+    }
+
+    .image-overlay i{
+        font-size: 1.2rem;
     }
 
     /*Add To Cart Page CSS */
@@ -587,16 +591,7 @@ ul li{
     }
 
     .image-overlay{
-        position: absolute;
-        bottom: 20%;
-        display: flex;
-        gap: 10px;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-        background-color: white;
-        color: black;
-        border-radius: 5px;
-        font-size: 1rem;
+        display: none;
     }
 
     .box1 img {
