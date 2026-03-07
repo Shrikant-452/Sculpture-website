@@ -144,3 +144,21 @@ function buyNow(id, category) {
 
   window.location.href = "./orderInfoPage.html";
 }
+
+function checkoutAll() {
+  let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+  if (cartItems.length === 0) {
+    alert("Cart is empty");
+    return;
+  }
+
+  // Store full cart
+  localStorage.setItem("selectedItems", JSON.stringify(cartItems));
+
+  window.location.href = "./orderInfoPage.html";
+}
+
+document.getElementById("save-later-btn").addEventListener("click", () => {
+  checkoutAll();
+});

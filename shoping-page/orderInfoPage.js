@@ -135,5 +135,3 @@ function ShowOrderDetail() {
   document.getElementById("grandTotal").innerText =
     `Rs.${totalPrice.toLocaleString()}`;
 }
-
-// 🔥 Auto Update Status Based On Time

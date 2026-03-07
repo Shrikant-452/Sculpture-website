@@ -1422,6 +1422,7 @@ h1 {
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
   overflow: hidden;
   transition: 0.3s;
+  margin: 2%;
 }
 
 .order-header {
@@ -1447,8 +1448,8 @@ h1 {
 }
 
 .order-left img {
-  width: 70px;
-  height: 70px;
+  width: 80px;
+  height: 80px;
   object-fit: cover;
   border-radius: 6px;
 }
@@ -1531,6 +1532,25 @@ h1 {
     font-weight: 500;
     display: inline-block;
     transition: 0.3s ease;
+}
+
+.remove{
+    background-color: rgb(231, 55, 55);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    display: inline-block;
+    transition: 0.3s ease;
+}
+
+.remove:hover{
+    cursor: pointer;
+}
+
+.cancel:hover{
+    cursor: pointer;
 }
 
 /* EXPAND SECTION */

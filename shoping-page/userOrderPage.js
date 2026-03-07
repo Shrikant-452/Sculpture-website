@@ -33,9 +33,13 @@ function showUserOrders() {
               <span class="status ${currentStatus.toLowerCase()}">
                 ${currentStatus}
               </span>
-              <span class="cancel" onclick="cancelOrder('${order.orderId}')">
-                Cancel
-              </span>
+              ${
+                currentStatus.toLowerCase() === "cancelled"
+                  ? `<span class="remove" onclick="removeOrder('${order.orderId}')">Remove</span>`
+                  : currentStatus.toLowerCase() === "delivered"
+                    ? ""
+                    : `<span class="cancel" onclick="cancelOrder('${order.orderId}')">Cancel</span>`
+              }
             </div>
           </div>
 
@@ -84,13 +88,18 @@ function capitalizeWords(text) {
   });
 }
 
+// 🔥 Auto Update Status Based On Time
 function updateOrderStatus(order) {
   const now = new Date().getTime();
   const diffMinutes = (now - order.createdAt) / (1000 * 60);
 
-  if (diffMinutes < 60) {
+  // 🔥 Respect Cancelled status first
+  if (order.status === "Cancelled") {
+    return "Cancelled";
+  }
+  if (diffMinutes < 240) {
     return "Pending";
-  } else if (diffMinutes < 60) {
+  } else if (diffMinutes < 240) {
     return "Processing";
   } else {
     return "Delivered";
@@ -110,4 +119,14 @@ function cancelOrder(orderId) {
   localStorage.setItem("orders", JSON.stringify(orders));
 
   showUserOrders(); // refresh UI
+}
+
+function removeOrder(orderId) {
+  let orders = JSON.parse(localStorage.getItem("orders")) || [];
+
+  orders = orders.filter((order) => order.orderId !== orderId);
+
+  localStorage.setItem("orders", JSON.stringify(orders));
+
+  showUserOrders();
 }
