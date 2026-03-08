@@ -374,6 +374,10 @@ i{
     margin: 0 10%;
 }
 
+.product-category-images:hover{
+    
+}
+
 .product-category-images .category-box .column .pt-3 a{
     font-size: 0.6rem;
     margin-top: 10px;
