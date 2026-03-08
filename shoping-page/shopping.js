@@ -1,16 +1,15 @@
 let filteredImages = [];
 let currentPage = 1;
 let allImagesData = [];
-let currentIndex = 0;
 let itemsPerPage = 9;
 
 /* ---------- RESPONSIVE ITEMS ---------- */
 
 function setItemsPerPage() {
   if (window.innerWidth <= 1024 && window.innerWidth > 768) {
-    itemsPerPage = 8; // tablet
+    itemsPerPage = 8;
   } else {
-    itemsPerPage = 9; // desktop
+    itemsPerPage = 9;
   }
 }
 
@@ -59,8 +58,10 @@ function displayAllCategory(data) {
 
     displaycategory.innerHTML += `
       <li>
-        <input type="checkbox" class="checkbox"
-        value="${category}" onclick="displayImageByCategory()">
+        <input type="checkbox"
+        class="checkbox"
+        value="${category}"
+        onclick="displayImageByCategory()">
 
         <label>${category} (${count})</label>
       </li>
@@ -80,44 +81,71 @@ function displayAllCategory(data) {
 /* ---------- SHOW IMAGES ---------- */
 
 function showImages() {
-  let imageContainer = document.getElementById("image-container");
-  imageContainer.innerHTML = "";
+  const container = document.getElementById("image-container");
+  container.innerHTML = "";
 
-  const nextItems = allImagesData.slice(
-    currentIndex,
-    currentIndex + itemsPerPage,
-  );
+  let start = (currentPage - 1) * itemsPerPage;
+  let end = start + itemsPerPage;
+
+  let pageItems = filteredImages.slice(start, end);
 
   const fragment = document.createDocumentFragment();
 
-  nextItems.forEach((item) => {
-    imageContainer.innerHTML += `
+  pageItems.forEach((item) => {
+    const card = document.createElement("div");
+    card.className = "product-card";
+    card.setAttribute("data-category", item.category);
 
-      <div class="product-card">
-        <div class="card-image-wrapper">
-            <img src="${item.img}" alt="Abstract Bronze Sculpture" class="card-image">
-            <span class="badge">New Arrival</span>
+    card.innerHTML = `
+
+      <div class="card-image-wrapper">
+
+        <img
+        src="${item.img}"
+        loading="lazy"
+        class="card-image"
+        onclick="displayImagedetail('${item.id}','${item.category}')">
+
+        <span class="badge">New Arrival</span>
+
+      </div>
+
+      <div class="image-overlay">
+
+        <i class="bi bi-heart"
+        onclick="addToWishlist('${item.id}','${item.category}')"></i>
+
+        <i class="bi bi-eye"
+        onclick="displayImagedetail('${item.id}','${item.category}')"></i>
+
+        <i class="bi bi-cart"></i>
+
+      </div>
+
+      <div class="card-content">
+
+        <h2 class="sculpture-title">${item.tital}</h2>
+
+        <p class="sculpture-artist">${item.subtitle}</p>
+
+        <div class="card-footer">
+
+          <span class="price">₹${item.price}</span>
+
+          <button class="add-btn" onclick="displayImagedetail('${item.id}','${item.category}')">
+            🛒 Add to Cart
+          </button>
+
         </div>
 
-        <div class="card-content">
-            <h2 class="sculpture-title">Abstract Bronze Sentinel</h2>
-            <p class="sculpture-artist">Handcrafted Original</p>
-            
-            <p class="sculpture-desc">
-                A unique, hand-poured bronze piece exploring modern geometric forms and ancient textures.
-            </p>
-
-            <div class="card-footer">
-                <span class="price">₹12,500</span>
-                <button class="add-btn">
-                    <span class="btn-icon">🛒</span> Add to Cart
-                </button>
-            </div>
-        </div>
-    </div>
+      </div>
 
     `;
+
+    fragment.appendChild(card);
   });
+
+  container.appendChild(fragment);
 }
 
 /* ---------- PAGINATION ---------- */
@@ -156,6 +184,7 @@ fetch("../data.json")
 
 function displayImagedetail(id, category) {
   const data = JSON.parse(localStorage.getItem("ImageData"));
+
   const selectedItem = data[category].find((el) => el.id === Number(id));
 
   localStorage.setItem("selectedItem", JSON.stringify(selectedItem));
@@ -167,6 +196,7 @@ function displayImagedetail(id, category) {
 
 function addToWishlist(id, category) {
   let data = JSON.parse(localStorage.getItem("ImageData"));
+
   let selectedItem = data[category].find((el) => el.id === Number(id));
 
   let wishlistItems = JSON.parse(localStorage.getItem("wishlistItems")) || [];

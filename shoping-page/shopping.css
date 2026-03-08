@@ -2,23 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
-}
-:root {
-    --canva-purple: #4F7F84;
-    --canva-mint: #00c4cc;
-    --canva-white: #ffffff;
-    --menu-bg: rgba(113, 109, 108, 0.2);
-    --primary-bg: #DBD7D3;
-    --card-bg: #CB674C;
-    --accent-gold: #d4a373;
-    --text-main: #fefae0;
-    --text-dim: #bc6c25;
 }
 
 body {
     animation: fadeIn 1s ease-in-out;
-     background-color: #BEC6C3;
      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
     
 }
@@ -37,16 +24,17 @@ body {
 
 html, body {
     width: 100%;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 body{
     margin: 0;
     padding: 0;
+    background-color: #BEC6C3 !important; 
 }
 
 header{
-   height: 70px;
+    height: 70px;
     width: 100%;
     max-width: 1500px;
     position: fixed;
@@ -812,6 +800,18 @@ label{
 
 /* Product Listing CSS */
 
+.content-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.image-container{
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
 .product-card {
     background: #ffffff;
     width: 100%;
@@ -831,7 +831,7 @@ label{
 .card-image-wrapper {
     position: relative;
     width: 100%;
-    height: 250px;
+    height: 400px;
     overflow: hidden;
 }
 
@@ -842,8 +842,56 @@ label{
     transition: transform 0.5s ease;
 }
 
+/* Icon style */
+/* Overlay container */
+.image-overlay {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: 0.3s ease;
+}
+
+/* Show overlay on hover */
+.product-card:hover .image-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Icon style */
+.image-overlay i {
+  background: white;
+  color: #333;
+
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  font-size: 16px;
+
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Hover effect */
+.image-overlay i:hover {
+  background: rgb(228, 113, 132);
+  color: white;
+  transform: scale(1.1);
+}
+
 .product-card:hover .card-image {
-    transform: scale(1.1); /* Smooth zoom effect on hover */
+    transform: scale(1.2); /* Smooth zoom effect on hover */
 }
 
 .badge {
@@ -955,90 +1003,6 @@ label{
     }
 }
 
-.product-textarea-title {
-    height: auto;     /* ✔ let text decide height */
-    max-height: 2.8em; /* optional clamp control */
-    margin-bottom: .5rem;
-    color: #000000d0;
-    width: 100%;
-    flex-wrap: wrap;
-    font-size: 0.875rem;
-    font-weight: 500;
-}
-
-.price{
-    border: 3px solid #ebc588;
-    border-left: none;
-    border-right: none;
-    border-top: none;
-    border-radius: 20%;
-}
-
-.price-section .price{
-    font-size: 20px;
-  font-weight: 800;
-  color: var(--accent);
-}
-
-.product-textarea-subtitle {
-    height: 1.125rem;
-    margin-bottom: .15rem;
-    font-size: 0.6rem;
-    color: #000000c6;
-}
-
-.is-family-secondary {
-    font-family: "Montserrat", sans-serif !important;
-}
-
-.is-uppercase {
-    text-transform: uppercase !important;
-}
-
-.is-size-6 {
-    font-size: 1rem !important;
-}
-
-.image-detail a {
-    color: #000;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.ellipsis {
-    display: -webkit-box;
-    display: block;
-    line-height: 1.4;
-    margin: 0 auto;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.price-section{
-    margin-top: 5px;
-    font-size: 1rem;
-    font-weight: 600;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 20px;
-}
-
-.product-textarea-finalprice{
-    color: black;
-    font-size: 1.2rem;
-}
-
-.product-small-tag{
-    background-color: #23b823;
-    border-radius: 10px;
-    width: 45%;
-    text-align: center;
-    font-size: 1rem;
-    height: auto;
-}
-
 .reveal {
     opacity: 0;
     transform: translateY(30px);
@@ -1070,17 +1034,8 @@ color:white;
 }
 
 /* Oreder Page CSS */
-:root {
-  --bg: #f4f6fb;
-  --card: #ffffff;
-  --text: #1f2937;
-  --muted: #6b7280;
-  --accent: #ff7a00;
-  --border: #e5e7eb;
-}
 
 body {
-  background: linear-gradient(180deg, #f7f8fc, #eef1f8);
   font-family: "Inter", system-ui, sans-serif;
   color: var(--text);
   line-height: 1.6;

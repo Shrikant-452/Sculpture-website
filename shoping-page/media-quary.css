@@ -257,28 +257,6 @@ i{
         flex-wrap: wrap;
     }
 
-    .image-container .box1{
-        height: auto;
-        width: 300px;
-    }
-
-    .product-small-tag{
-        background-color: #23b823;
-        border-radius: 10px;
-        width: 50%;
-        text-align: center;
-        font-size: 1rem;
-        height: auto;
-    }
-
-    .box1{
-        border-radius: 5%;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
-        margin: 20px;
-        padding: 10px 5px;
-        object-fit: cover;
-        margin: 3%;
-    }
 
     .image-overlay{
         position: absolute;
