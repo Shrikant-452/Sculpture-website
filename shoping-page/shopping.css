@@ -37,7 +37,7 @@ header{
     height: 70px;
     width: 100%;
     max-width: 1500px;
-    position: fixed;
+    position: relative;
     color: white;
     background-color: #E9BC8B;
     -webkit-backdrop-filter: blur(9px);
@@ -374,9 +374,7 @@ i{
     margin: 0 10%;
 }
 
-.product-category-images:hover{
-    
-}
+
 
 .product-category-images .category-box .column .pt-3 a{
     font-size: 0.6rem;
@@ -623,7 +621,12 @@ i{
     font-size:14px;
 }
 
-/* Satues Page CSS */
+/*------------------------------------------------------------------------------- Satues Page CSS */
+
+
+.image-section{
+    margin-top: 50px;
+}
 
 .hero {
     align-items: stretch;
@@ -1622,6 +1625,7 @@ h1 {
 .remove:hover{
     cursor: pointer;
 }
+
 
 .cancel:hover{
     cursor: pointer;
