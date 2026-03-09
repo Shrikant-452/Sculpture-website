@@ -324,7 +324,7 @@ img {
 /* counter Api */
 
 .dashboard-container { max-width: 1200px; margin: 0 auto; margin-right: 100px;}
-    .dashboard-header { margin-bottom: 30px; color: #d96919; }
+    .dashboard-header { margin-bottom: 30px; color: #4F7F84; }
     .stats-card {
       background-color: #ffffff;
       border-radius: 12px;
@@ -336,16 +336,22 @@ img {
      
     }
 
+    #counter-api{
+        margin-left: 70px;
+    }
+
     .feature1{
-      
+      background-color: #dfdfdc;
     padding: clamp(1.5rem, 3vw, 2rem);
     border-radius: 20px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+    box-shadow: 0 15px 35px rgba(248, 212, 120, 0.06);
     transition: all 0.3s ease;
     text-align: center;
       transform: translateY(-10px);
-    box-shadow: 0 8px 1px #4d2902, 0 8px 16px #499fa4, 0 12px 24px rgba(67, 179, 136, 0.3);
+    box-shadow: 3px 3px 3px 3px   rgba(179, 91, 67, 0.3), 0 3px 16px rgba(64, 93, 87, 0.823), 0 12px 20px rgba(67, 179, 136, 0.3) ,0 12px 20px rgba(43, 77, 64, 0.3);
     }
+
+    
 
     .stats-card p {
       font-size: 16px;
