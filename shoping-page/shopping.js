@@ -210,3 +210,67 @@ function addToWishlist(id, category) {
 
   localStorage.setItem("wishlistItems", JSON.stringify(wishlistItems));
 }
+
+// Homepage Slide Image Logic
+
+let slides = document.querySelectorAll(".slide");
+let dots = document.querySelectorAll(".dot");
+let current = 0;
+let autoSlide;
+
+/* Show Slide */
+function showSlide(index) {
+  slides.forEach((slide) => slide.classList.remove("active"));
+  dots.forEach((dot) => dot.classList.remove("active"));
+
+  slides[index].classList.add("active");
+  dots[index].classList.add("active");
+}
+
+/* Next Slide */
+function nextSlide() {
+  current = (current + 1) % slides.length;
+  showSlide(current);
+}
+
+/* Previous Slide */
+function prevSlide() {
+  current = (current - 1 + slides.length) % slides.length;
+  showSlide(current);
+}
+
+/* Buttons */
+document.getElementById("next").onclick = () => {
+  nextSlide();
+  resetAutoSlide();
+};
+
+document.getElementById("prev").onclick = () => {
+  prevSlide();
+  resetAutoSlide();
+};
+
+/* Dot Navigation */
+dots.forEach((dot, index) => {
+  dot.onclick = () => {
+    current = index;
+    showSlide(current);
+    resetAutoSlide();
+  };
+});
+
+/* Auto Slide Start */
+function startAutoSlide() {
+  autoSlide = setInterval(() => {
+    nextSlide();
+  }, 3000); // 3 seconds
+}
+
+/* Reset Auto Slide when user interacts */
+function resetAutoSlide() {
+  clearInterval(autoSlide);
+  startAutoSlide();
+}
+
+/* Start Auto Slide */
+startAutoSlide();
