@@ -26,20 +26,71 @@
       href="/Sculpture-website/image/web_img.png"
       type="image/x-icon"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
   </head>
-  <body>
+
+      <script>
+      window.addEventListener("scroll", function(){
+
+    let header = document.querySelector(".head-section");
+
+    if(window.scrollY > 80){
+        header.classList.add("header-scroll");
+    }
+    else{
+        header.classList.remove("header-scroll");
+    }
+
+});
+
+
+// scrolling animaction
+window.addEventListener("scroll", function(){
+
+  const boxes = document.querySelectorAll(".box");
+
+  boxes.forEach(function(box){
+
+    const position = box.getBoundingClientRect().top;
+    const screen = window.innerHeight;
+
+    if(position < screen - 100){
+      box.classList.add("active");
+    }
+
+  });
+
+});
+
+// footer part 
+
+const footer = document.querySelector(".footer");
+
+window.addEventListener("scroll", function(){
+
+  const position = footer.getBoundingClientRect().top;
+  const screen = window.innerHeight;
+
+  if(position < screen - 100){
+    footer.classList.add("active");
+  }
+
+});
+    </script>
+  <body >
+
     <div id="log-div">
       <span id="logo-text">FOR ALL THINGS ETHNIC.</span>
       <span id="logo-sign">SIGN IN</span>
       <span id="logo-contact">CONTACT US</span>
       <span></span>
     </div>
-
     <header class="head-section page-load">
-      <a href="/Sculpture-website/index.html" title="."
+      <a href="/Sculpture-website/index.html"
         ><div class="logo-container"></div
       ></a>
-      <nav class="navbar">
+      <nav class="navbar" >
         <form>
           <div class="main-container">
             <div class="search-bar">
@@ -82,7 +133,7 @@
       </div>
     </header>
 
-    <section class="middle-section">
+    <section class="middle-section" >
       <div class="hero-section">
         <div class="carousel-image page-load">
           <section class="hero">
@@ -125,7 +176,7 @@
             class="categories-container category-box"
             id="category-box"
           ></div>
-          <div class="has-text-centered mt-5 see-all-category pt-3">
+          <div class="has-text-centered mt-5 see-all-category pt-3 column has-text-centered is-4-touch is-2-desktop box">
             <button
               type="button"
               class="button is-small is-black is-rounded more-subjects"
@@ -352,12 +403,12 @@
             <p>Phone: +91 9876543210</p>
             <p>Address: Bengaluru, India</p>
 
-            <div class="social-icons">
-              <a href="#">🌐</a>
-              <a href="#">📷</a>
-              <a href="#">📘</a>
-              <a href="#">▶</a>
-            </div>
+           <div class="social-icons">
+  <a href="#"><i class="bi bi-whatsapp"></i></a>
+  <a href="#"><i class="bi bi-instagram"></i></a>
+  <a href="#"><i class="bi bi-facebook"></i></a>
+  <a href="#"><i class="bi bi-youtube"></i></a>
+</div>
           </div>
         </div>
         <div class="footer-bottom">
