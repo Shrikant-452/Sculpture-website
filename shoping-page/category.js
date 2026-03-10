@@ -1,6 +1,20 @@
 let visibleCategories = 6;
 let allCategories = [];
 
+window.addEventListener("resize", () => {
+  setInitialCategories();
+  displayCategoryContainer();
+});
+
+// check screen size
+function setInitialCategories() {
+  if (window.innerWidth >= 1024) {
+    visibleCategories = 12; // laptop / desktop
+  } else {
+    visibleCategories = 6; // mobile / tablet
+  }
+}
+
 const displayCategoryContainer = () => {
   let imageSection = document.getElementById("category-box");
   imageSection.innerHTML = "";
@@ -37,7 +51,7 @@ function displayCategory() {
     .then((res) => res.json())
     .then((data) => {
       allCategories = Object.values(data);
-
+      setInitialCategories(); // detect device
       displayCategoryContainer();
     });
 }

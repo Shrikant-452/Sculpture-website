@@ -5,124 +5,104 @@
 }
 
 body {
-    animation: fadeIn 1s ease-in-out;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
     
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
 html, body {
     width: 100%;
     /* overflow-x: hidden; */
+    scroll-behavior: smooth;
 }
 
 body{
     margin: 0;
     padding: 0;
-    background-color: #BEC6C3 !important; 
+    /* background-color: #BEC6C3 !important;  */
 }
 
 header{
-    height: 70px;
-    width: 100%;
-    max-width: 1500px;
-    position: relative;
-    color: white;
-    background-color: #E9BC8B;
+    height:70px;
+    width:100%;
+    max-width:1500px;
+    margin:25px auto;
+    color:white;
+    background-color:#E9BC8B;
     -webkit-backdrop-filter: blur(9px);
-    backdrop-filter: blur(9px);
-    top: 25px;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 30px;
-    display: flex;
-    align-items: center;
-    padding: 0 5%;
-    justify-content: space-between;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    backdrop-filter:blur(9px);
+    border-radius:30px;
+    display:flex;
+    align-items:center;
+    padding:0 5%;
+    justify-content:space-between;
+    box-shadow:0 4px 20px rgba(0,0,0,0.2);
     animation: slideDown 1s ease-out;
 }
 
-@keyframes slideDown {
-    from {
-        top: -100px;
-        opacity: 0;
-    }
-    to {
-        top: 15px;
-        opacity: 1;
-    }
-}
 
 .head-section {
     animation: slideDown 0.7s ease-out;
 }
 
-@keyframes slideDown {
-    from {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
+@keyframes slideDown { from { transform: translateY(-100%); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
 
 .logo-container{
-    background-image: url("../image/vave_logo.png");
-    background-size: cover;
-    height: 80px;
-    width: 80px;
-    border-radius: 50%;
-    transition: transform 0.3s ease;
+    background-image:url("../image/vave_logo.png");
+    background-size:cover;
+    height:80px;
+    width:80px;
+    border-radius:50%;
+    transition:transform 0.3s ease;
+}
+
+.logo-container:hover{
+    transform:scale(1.05);
 }
 
 .main-container{
     display: flex;
-    justify-content: flex-start;
-    border-radius: 10%;
 }
 
 body {
     font-family: Arial, sans-serif;
 }
 
-.search-bar {
-    display: flex;
-    align-items: center;
-    width: 700px;
-    border: 1px solid #ccc;
-    border-radius: 50px;
-    overflow: hidden;
-    background: #f9f9f9;
-}
+/* Search bar */
 
-.search-bar {
-    flex: 1;
-    min-width: 180px;
-}
-
-.search-bar {
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
+.search-bar{
+    display:flex;
+    align-items:center;
+    width:700px;
+    border:1px solid #ccc;
+    border-radius:50px;
+    overflow:hidden;
+    background:#f9f9f9;
+    transition:box-shadow 0.3s ease;
 }
 
 .search-bar:hover,
 .search-bar:focus-within {
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-    transform: scale(1.02);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
 }
+
+/* Page load animation */
+
+.page-load{
+    opacity:0;
+    animation: pageReveal 0.8s ease forwards;
+}
+
+@keyframes pageReveal{
+    to{
+        opacity:1;
+        transform: translateY(0);
+    }
+}
+
+.carousel-image { animation-delay: 0.2s; }
+.product-category { animation-delay: 0.3s; }
+.explore-content { animation-delay: 0.4s; }
+.footer { animation-delay: 0.5s; }
 
 
 .category {
@@ -225,7 +205,7 @@ i{
 .hero{
     width: 100%;
     max-width: 800px;
-    height:400px;
+    height:500px;
     position:relative;
     overflow:hidden;
     border-radius:5%;
@@ -253,7 +233,7 @@ i{
     width:100%;
     height:100%;
     object-fit:cover;
-    height:400px;
+    height:500px;
     object-fit:cover;
     border-radius:20px;
 }
@@ -357,6 +337,14 @@ i{
 .category-box-img a img{
     height: 110px;
     width: 110px;
+}
+
+.category-box-img img{
+    transition: transform 0.3s ease;
+}
+
+.category-box-img img:hover{
+    transform: scale(1.08);
 }
 
 .category-box{
@@ -528,6 +516,11 @@ i{
 .explore-section-image{
     border-radius: 50%;
     border: none;
+    transition: transform 0.3s ease;
+}
+
+.px-2 img:hover{
+    transform: scale(1.08);
 }
 
 .home-categories-list {
@@ -1015,15 +1008,15 @@ label{
     }
 }
 
-.reveal {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.6s ease;
+.reveal{
+    opacity:0;
+    transform:translateY(30px);
+    transition:all 0.6s ease;
 }
 
-.reveal{
-    opacity: 1;
-    transform: translateY(0);
+.reveal.active{
+    opacity:1;
+    transform:translateY(0);
 }
 
 .pagination{
@@ -1694,8 +1687,8 @@ h1 {
 }
 
 @keyframes fadeIn{
-    from{opacity:0; transform:translateY(30px);}
-    to{opacity:1; transform:translateY(0);}
+    from{opacity:0;}
+    to{opacity:1;}
 }
 
 /* LEFT SIDE - ORDER SUMMARY */
