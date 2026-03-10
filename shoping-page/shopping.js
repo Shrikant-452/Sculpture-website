@@ -278,3 +278,8 @@ function resetAutoSlide() {
 
 /* Start Auto Slide */
 startAutoSlide();
+
+document.getElementById("logo-sign").addEventListener("click", () => {
+  console.log("Loggin page");
+  window.location.href = "./loginPage.html";
+});

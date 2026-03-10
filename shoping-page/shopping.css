@@ -890,7 +890,6 @@ label{
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s;
-    border: 2px solid black;
 }
 
 .product-card:hover {
@@ -902,7 +901,7 @@ label{
 .card-image-wrapper {
     position: relative;
     width: 100%;
-    height: 400px;
+    height: 300px;
     overflow: hidden;
 }
 
@@ -921,9 +920,7 @@ label{
   right: 10px;
   display: flex;
   flex-direction: column;
-  background: transparent;
   gap: 10px;
-
   opacity: 0;
   transform: translateY(-10px);
   transition: 0.3s ease;
@@ -932,6 +929,7 @@ label{
 /* Show overlay on hover */
 .product-card:hover .image-overlay {
   opacity: 1;
+  background: transparent;
   transform: translateY(0);
 }
 
@@ -1967,19 +1965,10 @@ box-shadow:0 25px 60px rgba(0,0,0,.3);
 
 .left{
 flex:1;
-background:linear-gradient(135deg,#6a11cb,#2575fc);
-color:white;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:40px;
+background-image: url(../image/loginwallpaper.jpg);
+background-size: cover;
 }
 
-.left h1{
-font-size:34px;
-}
 
 /* RIGHT PANEL */
 
