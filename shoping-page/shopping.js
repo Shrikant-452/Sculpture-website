@@ -68,12 +68,12 @@ function displayAllCategory(data) {
     `;
 
     data[category].forEach((item) => {
+      item.category = category; // ADD THIS LINE
       allImagesData.push(item);
     });
   });
 
   filteredImages = [...allImagesData];
-
   showImages();
   createPagination();
 }
@@ -81,8 +81,9 @@ function displayAllCategory(data) {
 /* ---------- SHOW IMAGES ---------- */
 
 function showImages() {
+  if (!filteredImages || filteredImages.length === 0) return;
   const container = document.getElementById("image-container");
-  container.innerHTML = "";
+  // container.innerHTML = "";
 
   let start = (currentPage - 1) * itemsPerPage;
   let end = start + itemsPerPage;
@@ -98,7 +99,7 @@ function showImages() {
 
     card.innerHTML = `
 
-      <div class="card-image-wrapper">
+      <div class="card-image-wrapper ">
 
         <img
         src="${item.img}"
@@ -124,7 +125,7 @@ function showImages() {
 
       <div class="card-content">
 
-        <h2 class="sculpture-title">${item.tital}</h2>
+        <h2 class="sculpture-title">${item.title}</h2>
 
         <p class="sculpture-artist">${item.subtitle}</p>
 
@@ -175,9 +176,12 @@ function changePage(page) {
 
 /* ---------- FETCH DATA ---------- */
 
-fetch("../data.json")
+fetch("./data.json")
   .then((res) => res.json())
-  .then((data) => displayAllCategory(data))
+  .then((data) => {
+    // check data
+    displayAllCategory(data);
+  })
   .catch((err) => console.error(err));
 
 /* ---------- PRODUCT DETAIL ---------- */
