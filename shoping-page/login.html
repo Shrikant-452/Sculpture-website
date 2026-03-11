@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="/shoping-page/login.css" />
+
+    <!-- Google Login -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <style></style>
+  </head>
+
+  <script>
+    function handleCredentialResponse(response) {
+      console.log("Google Token:", response.credential);
+
+      alert("Google Login Successful!");
+    }
+  </script>
+  <body>
+    <div class="container">
+      <!-- LEFT LOGIN -->
+      <div class="login-box">
+        <h1>Welcome Back</h1>
+        <p>Select Login Type</p>
+
+        <!-- ADMIN LOGIN -->
+        <div class="admin-box">
+          <h2>Admin Login</h2>
+
+          <input type="email" placeholder="Admin Email" id="email" />
+
+          <input type="password" placeholder="Password" id="password" />
+
+          <button class="admin-btn" onclick="gotoShop()">Login</button>
+        </div>
+
+        <!-- USER GOOGLE LOGIN -->
+        <div class="user-box">
+          <h2>User Login</h2>
+
+          <div
+            id="g_id_onload"
+            data-client_id="YOUR_GOOGLE_CLIENT_ID"
+            data-callback="handleCredentialResponse"
+          ></div>
+
+          <div
+            class="g_id_signin"
+            data-type="standard"
+            data-size="large"
+            data-theme="outline"
+            data-text="sign_in_with"
+            data-shape="pill"
+          ></div>
+        </div>
+      </div>
+
+      <!-- RIGHT IMAGE -->
+      <div class="image-box"></div>
+    </div>
+
+    <script>
+      function gotoShop() {
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
+        localStorage.setItem(
+          "AdminData",
+          JSON.stringify({
+            email: email,
+            password: password,
+          }),
+        );
+        window.location.href = "./adminDashboard.html";
+      }
+    </script>
+  </body>
+</html>
