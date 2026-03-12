@@ -22,11 +22,92 @@
     />
     <title>Modern Sculpture Studio</title>
   </head>
+
+  <script>
+    
+    // chacking the contition to login or not the user
+    window.addEventListener("scroll", function () {
+        let header = document.querySelector(".head-section");
+        if (window.scrollY > 80) {
+          header.classList.add("header-scroll");
+        } else {
+          header.classList.remove("header-scroll");
+        }
+      });
+
+      window.addEventListener("scroll", function () {
+        const boxes = document.querySelectorAll(".box");
+        boxes.forEach(function (box) {
+          const position = box.getBoundingClientRect().top;
+          if (position < window.innerHeight - 100) {
+            box.classList.add("active");
+          }
+        });
+      });
+
+      window.addEventListener("scroll", function () {
+        const footer = document.querySelector(".footer");
+        if(footer) {
+            const position = footer.getBoundingClientRect().top;
+            if (position < window.innerHeight - 100) {
+              footer.classList.add("active");
+            }
+        }
+      });
+
+      // --- LOGIN CHECKS AND ROUTING ---
+      function Wishist(){
+    if(localStorage.getItem("isLoggedIn") !== "true"){
+        
+        // Change this path to exactly where your login page is saved!
+        window.location.href = "/Sculpture-website/loginpage/login_index.html"; 
+    } else {
+        window.location.href = "watchlist.html";
+    }
+}
+
+      function myorder(){
+        if(localStorage.getItem("isLoggedIn") !== "true"){
+            
+            window.location.href="/Sculpture-website/loginpage/login_index.html";
+        } else {
+            window.location.href="userOrderPage.html";
+        }
+      }
+
+      function cart(){
+        if(localStorage.getItem("isLoggedIn") !== "true"){
+            
+            window.location.href="/Sculpture-website/loginpage/login_index.html";
+        } else {
+            window.location.href="addToCart.html";
+        }
+      }
+
+      function logout(){
+        localStorage.removeItem("isLoggedIn");
+        alert("You have been logged out.");
+        window.location.href="login.html";
+      }
+
+// log out
+
+function logout(){
+
+localStorage.removeItem("isLoggedIn");
+
+window.location.href="login.html";
+alert("logout ")
+
+}
+  </script>
   <body>
+
     <div id="log-div">
       <span id="logo-text">FOR ALL THINGS ETHNIC.</span>
-      <span id="logo-sign">SIGN IN</span>
+      <span id="logo-sign"><a href="/Sculpture-website/loginpage/login_index.html">SIGN IN</a></span>
       <span id="logo-contact">CONTACT US</span>
+      <span id="logo-contact"> <a onclick="logout()" href="">Logout</a></span>
       <span></span>
     </div>
     
@@ -54,25 +135,28 @@
         </form>
       </nav>
       <div class="add-to-cart-menu">
+        
         <div class="wishlist">
-          <a href="./watchlist.html">
+          <a onclick="Wishist()" style="cursor: pointer;">
             <i class="bi bi-heart"></i>
             <span>Wishlist</span>
           </a>
         </div>
+
         <div class="my-order">
-          <a href="./userOrderPage.html">
+          <a onclick="myorder()" style="cursor: pointer;">
             <i class="bi bi-person"></i>
             <span>My Order</span>
           </a>
         </div>
+
         <div class="cart">
-          <a href="./addToCart.html">
+          <a onclick="cart()" style="cursor: pointer;">
             <i class="bi bi-cart"></i>
             <span>Cart</span>
           </a>
         </div>
-      </div>
+
     </header>
 
     <section class="image-section">

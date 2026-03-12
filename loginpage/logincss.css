@@ -1,111 +1,283 @@
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial;
+font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-background:#f3f3f3;
+background:#f4f4f4;
 }
+
+/* MAIN CONTAINER */
 
 .container{
-width:1200px;
-height:700px;
-background:white;
 display:flex;
-border-radius:20px;
-overflow:hidden;
-box-shadow:0 10px 40px rgba(0,0,0,0.2);
+height:100vh;
+width:100%;
 }
 
-/* LEFT SIDE */
+/* LEFT LOGIN PANEL */
 
 .login-box{
-width:50%;
-padding:60px;
-display:flex;
-flex-direction:column;
-gap:30px;
+width:45%;
+padding:70px;
+background:white;
 }
 
 .login-box h1{
-font-size:35px;
+font-size:40px;
+margin-bottom:10px;
 }
 
 .login-box p{
 color:gray;
+margin-bottom:25px;
 }
 
-.admin-box,
-.user-box{
-display:flex;
-flex-direction:column;
-gap:15px;
+/* ADMIN LOGIN */
+
+.admin-box{
+margin-bottom:30px;
 }
 
-.admin-box input{
+.admin-title{
+cursor:pointer;
+margin-bottom:10px;
+color: white;
+height: 40px;
+width: 100px;
+border-radius: 5px;
+border: none;
+background-color: #333;
+}
+
+.admin-form{
+max-height:0;
+overflow:hidden;
+transition:0.4s;
+}
+
+.admin-form.show{
+max-height:200px;
+}
+
+.admin-form input{
+width:100%;
 padding:12px;
-border-radius:6px;
+margin:10px 0;
 border:1px solid #ccc;
-font-size:15px;
+border-radius:8px;
 }
 
 .admin-btn{
+width:100%;
 padding:12px;
-border:none;
 background:black;
 color:white;
+border:none;
 border-radius:8px;
 cursor:pointer;
-font-size:16px;
+}
+
+/* USER LOGIN */
+
+.user-box{
+margin-bottom:25px;
+}
+
+.user-box input{
+width:100%;
+padding:12px;
+margin:10px 0;
+border:1px solid #ccc;
+border-radius:8px;
+}
+
+.user-btn{
+width:100%;
+padding:12px;
+background:black;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
 transition:0.3s;
 }
 
-.admin-btn:hover{
-background:#444;
+.user-btn:hover{
+background:#333;
+}
+
+/* GOOGLE LOGIN */
+
+.google-box{
+margin-top:10px;
+}
+
+.g_id_signin{
+margin-top:10px;
 }
 
 /* RIGHT IMAGE */
 
 .image-box{
-width:50%;
-position:relative;
-background:url("https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=7680&q=100");
+width:55%;
+background-image:url("/Sculpture-website/loginpage/login-img8k.png"); /* change image path */
 background-size:cover;
 background-position:center;
+background-repeat:no-repeat;
+margin:20px;
+border-radius:20px;
 }
 
-.image-box::after{
-content:"";
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.15);
-}
-
-/* MOBILE */
+/* RESPONSIVE */
 
 @media(max-width:900px){
 
 .container{
 flex-direction:column;
-height:auto;
 }
 
 .login-box{
 width:100%;
+padding:40px;
 }
 
 .image-box{
 width:100%;
 height:300px;
+margin:0;
+border-radius:0;
 }
 
+}
+
+.user-box{
+width:100%;
+max-width:350px;
+}
+
+/* INPUT STYLE */
+
+.user-box input{
+
+width:100%;
+padding:12px;
+margin:10px 0;
+
+border:1px solid #ccc;
+border-radius:8px;
+
+}
+
+/* LOGIN BUTTON */
+
+.login-btn{
+
+width:100%;
+padding:12px;
+
+background:black;
+color:white;
+
+border:none;
+border-radius:8px;
+
+cursor:pointer;
+
+transition:0.3s;
+
+}
+
+.login-btn:hover{
+
+background:#333;
+
+}
+
+/* SIGNUP BUTTON */
+
+.signup-toggle{
+
+width:100%;
+padding:10px;
+
+background:transparent;
+border:2px solid black;
+
+border-radius:8px;
+
+cursor:pointer;
+
+transition:0.3s;
+
+}
+
+.signup-toggle:hover{
+
+background:black;
+color:white;
+
+}
+
+/* SIGNUP FORM */
+
+.signup-box{
+
+max-height:0;
+overflow:hidden;
+
+transition:0.5s ease;
+
+}
+
+/* SHOW ANIMATION */
+
+.signup-box.show{
+
+max-height:200px;
+
+}
+
+/* CREATE ACCOUNT BUTTON */
+
+.create-btn{
+
+width:100%;
+padding:12px;
+
+background:#CB674C;
+color:white;
+
+border:none;
+
+border-radius:8px;
+
+margin-top:10px;
+
+cursor:pointer;
+
+transition:0.3s;
+
+}
+
+.create-btn:hover{
+
+background:#a6533d;
+
+}
+.logo-container{
+    background-image:url("../image/vave_logo.png");
+    background-size:cover;
+    height:80px;
+    width:80px;
+    border-radius:50%;
+    transition:transform 0.3s ease;
+}
+
+#text-login{
+    color: #747C71;
+    text-align: center;
 }
