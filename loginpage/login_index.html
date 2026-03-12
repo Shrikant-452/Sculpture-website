@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Login Page</title>
+<link rel="stylesheet" href="logincss.css">
+
+
+<!-- library of loging api -->
+ <script src="https://accounts.google.com/gsi/client" async defer></script>
+
+</head>
+
+<script>
+    // js for api loging befor
+    function handleCredentialResponse(response) {
+
+    console.log("Google Token:", response.credential);
+
+    alert("Google Login Successful!");
+
+}
+
+// login api for after login
+
+function handleCredentialResponse(response) {
+
+    console.log("Google Token:", response.credential);
+
+    alert("Login Successful!");
+
+    window.location.href = "shopping_page.html";
+
+}
+</script>
+<body>
+
+<div class="container">
+
+    <!-- LEFT LOGIN -->
+    <div class="login-box">
+
+        <h1>Welcome Back</h1>
+        <p>Select Login Type</p>
+
+        <!-- ADMIN LOGIN -->
+        <div class="admin-box">
+
+            <h2>Admin Login</h2>
+
+            <input type="email" placeholder="Admin Email">
+
+            <input type="password" placeholder="Password">
+
+            <button class="admin-btn" id="admin-btn" onclick="gotoShop()">Login</button>
+
+        </div>
+
+
+        <!-- USER GOOGLE LOGIN -->
+        <div class="user-box">
+
+            <h2>User Login</h2>
+
+            <div id="g_id_onload"
+                    data-client_id="310974968036-l201apcg930itjgfhfkudpb541p991b8.apps.googleusercontent.com"
+                    data-callback="handleCredentialResponse">
+            </div>
+
+            <div class="g_id_signin"
+                data-type="standard"
+                data-size="large">
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- RIGHT IMAGE -->
+    <div class="image-box"></div>
+
+</div>
+
+<script>
+    function gotoShop() {
+        window.location.href = "../shoping-page/adminDashboard.html";
+      }
+</script>
+
+</body>
+</html>

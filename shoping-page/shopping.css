@@ -24,7 +24,7 @@ body{
 /* log div */
 
 #log-div{
-    background-color: #E42256;
+    background-color: #CB5A62;
     min-height: 50px;
     width: 100%;
     color: white;
@@ -1218,7 +1218,7 @@ label{
 }
 
 .reveal{
-    opacity:0;
+    opacity:1;
     transform:translateY(30px);
     transition:all 0.6s ease;
 }
