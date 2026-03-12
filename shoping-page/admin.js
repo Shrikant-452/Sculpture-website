@@ -161,3 +161,4 @@ renderProducts();
 renderUsers();
 renderOrders();
 loadDashboard();
+loadDashboard();

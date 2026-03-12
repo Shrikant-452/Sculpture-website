@@ -1176,7 +1176,7 @@ h1 {
 .footer{
     background:#161815;
     color:#ddd;
-    background-image: url(https://cdn.exotcindia.com/images/footer-bg.png);
+    background-image: url(../Sculpture-website/image/footer-img.png);
     padding:40px 60px 20px;
 }
 
@@ -1386,3 +1386,5 @@ h1 {
     .shopmax-sort-select { max-width: 100%; }
     .footer-container { grid-template-columns: 1fr; }
 }
+
+

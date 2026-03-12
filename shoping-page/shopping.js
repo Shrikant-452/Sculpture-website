@@ -9,7 +9,7 @@ function setItemsPerPage() {
   if (window.innerWidth <= 1024 && window.innerWidth > 768) {
     itemsPerPage = 8;
   } else {
-    itemsPerPage = 9;
+    itemsPerPage = 12;
   }
 }
 
@@ -83,7 +83,7 @@ function displayAllCategory(data) {
 function showImages() {
   if (!filteredImages || filteredImages.length === 0) return;
   const container = document.getElementById("image-container");
-  // container.innerHTML = "";
+  container.innerHTML = "";
 
   let start = (currentPage - 1) * itemsPerPage;
   let end = start + itemsPerPage;
@@ -106,20 +106,17 @@ function showImages() {
         loading="lazy"
         class="card-image"
         onclick="displayImagedetail('${item.id}','${item.category}')">
-
-        <span class="badge">New Arrival</span>
-
       </div>
 
       <div class="image-overlay">
 
         <i class="bi bi-heart"
-        onclick="addToWishlist('${item.id}','${item.category}')"></i>
+        onclick="addToWishlist('${item.id}','${item.category}')" title="Add To Wishlist"></i>
 
         <i class="bi bi-eye"
-        onclick="displayImagedetail('${item.id}','${item.category}')"></i>
+        onclick="displayImagedetail('${item.id}','${item.category}')" title="View Details"></i>
 
-        <i class="bi bi-cart"></i>
+        <i class="bi bi-cart" onclick="displayImagedetail('${item.id}','${item.category}')" title="Add To Cart"></i>
 
       </div>
 
@@ -183,6 +180,8 @@ fetch("./data.json")
     displayAllCategory(data);
   })
   .catch((err) => console.error(err));
+
+// Cheak a User Loginned or Not
 
 /* ---------- PRODUCT DETAIL ---------- */
 
@@ -278,7 +277,6 @@ function resetAutoSlide() {
 
 /* Start Auto Slide */
 startAutoSlide();
-
 document.getElementById("logo-sign").addEventListener("click", () => {
   console.log("Loggin page");
   window.location.href = "./loginPage.html";
