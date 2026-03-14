@@ -22,9 +22,205 @@
     />
     <title>Modern Sculpture Studio</title>
   </head>
+<style>
+  /* Enable smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+}
 
+/* =========================================
+   HEADER ANIMATIONS
+   ========================================= */
+.head-section {
+  position: sticky; /* Keeps it at the top */
+  top: 0;
+  z-index: 1000;
+  background-color: #ffffff;
+  transition: all 0.4s ease-in-out; /* Smoothly animates changes */
+}
+
+/* This is triggered by your JS when scrolling down */
+.header-scroll {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px); /* Modern frosted glass effect */
+}
+
+/* =========================================
+   SCROLL REVEAL ANIMATIONS
+   ========================================= */
+/* Set the initial hidden state for elements you want to animate */
+.box, .footer, .reveal {
+  opacity: 0;
+  transform: translateY(50px); /* Start slightly lower */
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Your JS adds the 'active' class when the element enters the screen */
+.box.active, .footer.active, .reveal.active {
+  opacity: 1;
+  transform: translateY(0); /* Slide back to original position */
+}
+
+/* =========================================
+   HOVER & UI ENHANCEMENTS
+   ========================================= */
+/* Give interactive items a nice lift when hovered */
+button, .add-to-cart-menu a {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+button:hover, .add-to-cart-menu a:hover {
+  transform: translateY(-2px);
+  color: #ff6b6b; /* Adjust this to match your brand colors */
+}
+
+/* Hero image slight zoom on hover for a premium feel */
+.hero-image {
+  overflow: hidden;
+}
+
+.page-banner-image {
+  transition: transform 0.6s ease;
+  margin-top:0px;
+}
+
+.hero-image:hover .page-banner-image {
+  transform: scale(1.03); /* Subtle zoom in */
+}
+/* --- THE GRID LAYOUT --- */
+.product-grid {
+  display: grid;
+  /* Automatically fits as many 280px cards as possible in a row */
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 40px;
+  padding: 20px 0;
+}
+
+/* --- THE PRODUCT CARD --- */
+.product-card {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* --- THE IMAGE WRAPPER (The Secret to Perfect UI) --- */
+.image-wrapper {
+  width: 100%;
+  aspect-ratio: 4 / 5; /* Forces every image to be the exact same tall rectangle */
+  overflow: hidden;
+  position: relative;
+  background-color: #f9f9f9;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Prevents stretching, crops perfectly */
+  transition: transform 0.8s ease;
+}
+
+.product-card:hover .product-image {
+  transform: scale(1.08); /* Slow, premium zoom effect on hover */
+}
+
+/* --- QUICK ADD BUTTON (Hidden until hover) --- */
+.quick-add-btn {
+  position: absolute;
+  bottom: -50px; /* Hidden below the image */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  background: rgba(255, 255, 255, 0.95);
+  color: #1a1a1a;
+  border: none;
+  padding: 12px 0;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: bottom 0.4s ease, background 0.3s ease, color 0.3s ease;
+}
+
+.product-card:hover .quick-add-btn {
+  bottom: 20px; /* Slides up smoothly */
+}
+
+.quick-add-btn:hover {
+  background: #1a1a1a;
+  color: #ffffff;
+}
+
+/* --- TEXT & INFO --- */
+.product-info {
+  padding: 20px 15px;
+  text-align: center;
+}
+
+.product-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.product-price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #8A7350; /* A nice bronze/gold accent color */
+  margin: 0;
+}
+
+</style>
   <script>
     
+    document.addEventListener("DOMContentLoaded", function() {
+  const container = document.getElementById("image-container");
+  
+  // High-quality sample data
+  const products = [
+    { title: "Serene Buddha Bust", price: "₹12,500", img: "https://images.unsplash.com/photo-1601042879364-f3947d3f9c16?auto=format&fit=crop&q=80&w=600" },
+    { title: "Classic Marble Head", price: "₹18,000", img: "https://images.unsplash.com/photo-1582560469780-e37456d25167?auto=format&fit=crop&q=80&w=600" },
+    { title: "Abstract Wood Carving", price: "₹8,200", img: "https://images.unsplash.com/photo-1618604440679-d1011500d418?auto=format&fit=crop&q=80&w=600" },
+    { title: "Bronze Thinker", price: "₹24,500", img: "https://images.unsplash.com/photo-1574868991734-f8502cebb5e3?auto=format&fit=crop&q=80&w=600" },
+    { title: "Divine Ganesha", price: "₹15,400", img: "https://images.unsplash.com/photo-1629813589136-e822071fdbbc?auto=format&fit=crop&q=80&w=600" },
+    { title: "Angel Statue", price: "₹11,000", img: "https://images.unsplash.com/photo-1599573678385-2e6b7d2db95a?auto=format&fit=crop&q=80&w=600" }
+  ];
+
+  // Clear the container first
+  if(container) {
+    container.innerHTML = ""; 
+    
+    // Inject each product
+    products.forEach((product, index) => {
+      const card = document.createElement("div");
+      // Add the 'reveal' class so your scroll animations catch it!
+      card.className = "product-card reveal"; 
+      
+      card.innerHTML = `
+        <div class="image-wrapper">
+          <img src="${product.img}" alt="${product.title}" class="product-image">
+          <button class="quick-add-btn"><i class="bi bi-cart-plus"></i> Add to Cart</button>
+        </div>
+        <div class="product-info">
+          <h4 class="product-title">${product.title}</h4>
+          <p class="product-price">${product.price}</p>
+        </div>
+      `;
+      container.appendChild(card);
+    });
+  }
+});
     // chacking the contition to login or not the user
     window.addEventListener("scroll", function () {
         let header = document.querySelector(".head-section");
@@ -101,6 +297,68 @@ alert("logout ")
 
 }
   </script>
+
+  <script>
+  // Wait for the DOM to load
+  document.addEventListener("DOMContentLoaded", function() {
+
+    // 1. Sticky Header Shrink
+    window.addEventListener("scroll", function () {
+      let header = document.querySelector(".head-section");
+      if (window.scrollY > 80) {
+        header.classList.add("header-scroll");
+      } else {
+        header.classList.remove("header-scroll");
+      }
+    });
+
+    // 2. Scroll Reveal Animation for Content & Footer
+    // Added ".reveal" so your image-container animates too!
+    window.addEventListener("scroll", function () {
+      const animatedElements = document.querySelectorAll(".box, .reveal, .footer");
+      
+      animatedElements.forEach(function (el) {
+        const position = el.getBoundingClientRect().top;
+        // If the element is within the viewport, reveal it
+        if (position < window.innerHeight - 100) {
+          el.classList.add("active");
+        }
+      });
+    });
+
+  });
+
+  // --- LOGIN CHECKS AND ROUTING ---
+  function Wishist(){
+    if(localStorage.getItem("isLoggedIn") !== "true"){
+        window.location.href = "/Sculpture-website/loginpage/login_index.html"; 
+    } else {
+        window.location.href = "watchlist.html";
+    }
+  }
+
+  function myorder(){
+    if(localStorage.getItem("isLoggedIn") !== "true"){
+        window.location.href="/Sculpture-website/loginpage/login_index.html";
+    } else {
+        window.location.href="userOrderPage.html";
+    }
+  }
+
+  function cart(){
+    if(localStorage.getItem("isLoggedIn") !== "true"){
+        window.location.href="/Sculpture-website/loginpage/login_index.html";
+    } else {
+        window.location.href="addToCart.html";
+    }
+  }
+
+  function logout(){
+    localStorage.removeItem("isLoggedIn");
+    alert("You have been logged out.");
+    window.location.href="login.html";
+  }
+</script>
   <body>
 
     <div id="log-div">
@@ -162,37 +420,20 @@ alert("logout ")
     <section class="image-section">
       <section class="hero-image">
         <img
-          src="https://cdn.exoticindia.com/images/products/category-banners/category-104--2_1700120033_11824.webp"
+          src="/Sculpture-website/image/order_page.png"
           class="page-banner-image"
           alt=""
           width="100%"
-          height="300px"
+          height="700px"
         />
-      </section>
-      <div class="header-image-text">
-        <h1
+         <h1
           class="title is-size-2-desktop is-size-4-touch has-text-white has-text-centered"
         >
+        <br>
           HINDU GODS &amp; GODDESSES STATUES
         </h1>
-        <nav
-          class="breadcrumb is-size-6-desktop is-size-7-touch has-text-white"
-          aria-label="breadcrumbs"
-        >
-          <ul class="is-justify-content-center">
-            <li>
-              <a href="./shopping_page.html" class="has-text-white" title="Home"
-                >Home</a
-              >
-            </li>
-            <li>
-              <a href="./statues.html" class="has-text-white" title="Statues"
-                >Statues</a
-              >
-            </li>
-          </ul>
-        </nav>
-      </div>
+      </section>
+      
     </section>
     <button class="filter-toggle" type="button" onclick="toggleFilter()">
       ☰ Filters

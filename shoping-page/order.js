@@ -2,6 +2,31 @@ window.onload = function () {
   vieworedredItem();
 };
 
+
+
+  function addToCart(id, category) {{
+    if(localStorage.getItem("isLoggedIn") !== "true"){
+        window.location.href = "/Sculpture-website/loginpage/login_index.html"; 
+    } else {  
+      const data = JSON.parse(localStorage.getItem("ImageData"));
+  const selectedItem = data[category].find((el) => el.id === Number(id));
+  let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+  if (cartItems.length >= 5) {
+    
+    return;
+  }
+  // 🔥 THIS IS WHAT YOU WERE MISSING
+  cartItems.push(selectedItem);
+
+  // Save updated array
+  localStorage.setItem("cartItems", JSON.stringify(cartItems));
+
+  
+  window.location.href = "./addToCart.html";
+}
+    }
+  }
+
 function vieworedredItem() {
   const item = JSON.parse(localStorage.getItem("selectedItem"));
   let oredrPageContainer = document.getElementById("order-page-container");
@@ -47,7 +72,7 @@ function vieworedredItem() {
             <option>3</option>
           </select>
 
-          <button class="cta" type="button" onclick="addToCart('${item.id}','${item.category}')">Add to Cart</button>
+          <button class="cta" type="button"  onclick="addToCart('${item.id}','${item.category}')">Add to Cart</button>
         </div>
 
         <details class="specs">
@@ -61,23 +86,7 @@ function vieworedredItem() {
     </div>`;
 }
 
-function addToCart(id, category) {
-  const data = JSON.parse(localStorage.getItem("ImageData"));
-  const selectedItem = data[category].find((el) => el.id === Number(id));
-  let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-  if (cartItems.length >= 5) {
-    alert("Cart is full! Maximum 5 items allowed.");
-    return;
-  }
-  // 🔥 THIS IS WHAT YOU WERE MISSING
-  cartItems.push(selectedItem);
 
-  // Save updated array
-  localStorage.setItem("cartItems", JSON.stringify(cartItems));
-
-  alert("Item added to cart!");
-  window.location.href = "./addToCart.html";
-}
 
 function updateQuantity(id, category, quantity) {
   let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];

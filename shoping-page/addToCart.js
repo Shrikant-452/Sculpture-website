@@ -82,7 +82,7 @@ function removeItem(id, category) {
     (item) => item.id !== Number(id) || item.category !== category,
   );
   localStorage.setItem("cartItems", JSON.stringify(cartItems));
-  alert("Item removed from cart");
+ 
   showCartItems();
   cartSummary();
 }

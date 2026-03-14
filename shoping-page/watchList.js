@@ -48,6 +48,6 @@ function removeItem(id, category) {
     (item) => item.id !== Number(id) || item.category !== category,
   );
   localStorage.setItem("wishlistItems", JSON.stringify(watchlistItems));
-  alert("Item removed from watchlist");
+  
   displayWatchListItem();
 }
