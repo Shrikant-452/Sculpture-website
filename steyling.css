@@ -1168,15 +1168,16 @@ h1 {
     opacity: 1;
 }
 
+
 /* FOOTER */
  .footer-section{
     margin-top: 10%;
 }
 
-.footer{
-    background:#161815;
+.footer1{
+    
     color:#ddd;
-    background-image: url(../Sculpture-website/image/footer-img.png);
+   
     padding:40px 60px 20px;
 }
 
@@ -1184,6 +1185,8 @@ h1 {
     display:flex;
     justify-content:space-between;
     flex-wrap:wrap;
+    color: white;
+    background-image: url(../Sculpture-website/image/footer-img.png);
 }
 
 .footer-box{
@@ -1235,6 +1238,8 @@ h1 {
     padding-top:15px;
     margin-top:20px;
     font-size:14px;
+     color: white;
+    background-image: url(../Sculpture-website/image/footer-img.png);
 }
 
 .footer{
